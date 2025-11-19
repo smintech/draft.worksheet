@@ -2,20 +2,23 @@ let colors = ["red", "blue", "green", "orange", "purple"];
 let index = 0;
 let intervalId = null;
 
-document.getElementById("changeColorBtn").addEventListener("click",function () {
+document.getElementById("changeColorBtn").addEventListener("click", function() {
+    document.body.style.backgroundColor = colors[index];
+    index++;
+    if (index === colors.length) index = 0;
+});
+
+document.getElementById("changeColorBtn").addEventListener("click", function() {
     if (intervalId !== null) return;
 
-    intervalId = setInterval(function () {
+    intervalId = setInterval(function() {
         document.body.style.backgroundColor = colors[index];
-
         index++;
-        if (index === colors.length) {
-            index = 0;
-        }
+        if (index === colors.length) index = 0;
     }, 1000);
 });
 
-document.getElementById("changeColorBtn").addEventListener("click",function () {
+document.getElementById("stopBtn").addEventListener("click", function() {
     clearInterval(intervalId);
     intervalId = null;
 });
