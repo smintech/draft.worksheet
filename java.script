@@ -1,10 +1,12 @@
 let colors = ["red", "blue", "green", "orange", "purple"];
 let index = 0;
 document.getElementById("changeColorBtn"){
+
+setInterval(function() {
     document.body.style.backgroundColor = colors[index];
     index++;
     if (index === colors.length) index = 0;
-});
+}1000);
 document.getElementById("changeColorBtn"){
 
 setInterval(function() {
