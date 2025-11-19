@@ -6,4 +6,4 @@ function changeColor() {
   body.style.backgroundColor = colors[colorIndex];
   colorIndex = (colorIndex + 1) % colors.length;
 }
-setInterval(changeColor,1000);
+setInterval(changeColor, 1000);
