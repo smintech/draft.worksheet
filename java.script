@@ -2,10 +2,10 @@ let colors = ["red", "blue", "green", "orange", "purple"];
 let index = 0;
 let intervalId = null;
 
-document.getElementById("changeColorBtn").addEventListener("click", () => {
+document.getElementById("changeColorBtn").addEventListener("click",function () {
     if (intervalId !== null) return;
 
-    intervalId = setInterval(() => {
+    intervalId = setInterval(function () {
         document.body.style.backgroundColor = colors[index];
 
         index++;
