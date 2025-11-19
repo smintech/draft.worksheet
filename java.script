@@ -15,7 +15,7 @@ document.getElementById("changeColorBtn").addEventListener("click",function () {
     }, 1000);
 });
 
-document.getElementById("changeColorBtn").addEventListener("click", () => {
+document.getElementById("changeColorBtn").addEventListener("click",function () {
     clearInterval(intervalId);
     intervalId = null;
 });
