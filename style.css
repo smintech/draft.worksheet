@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin-top: 50px;
-    animation: color-animation 10sinfinite;
+    animation: color-animation 10s infinite;
 }
 @keyframes color-animation {
   0% { background-color: #ffc60b; }
