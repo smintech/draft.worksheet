@@ -1,4 +1,4 @@
-document.getElementById("loadBtn").addEventListener("click", () => {
+document.getElementById("LoadUser").addEventListener("click", () => {
     fetch("users.json")
         .then(response => response.json())
         .then(data => {
