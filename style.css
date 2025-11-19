@@ -1,9 +1,23 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin-top: 50px;
-    background: white, black, orange, blue;
-    animation: bg 10s infinite;
+    body!
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(-45deg, #415800, #e560dc, #ffb374, #ef5f5f, #d840b6);
+    background-size: 400% 400%; 
+    animation: bg 12s ease infinite;
+}
+@keyframes bg {
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 100%;
+    }
+    100%{
+      background-position: 0% 50%;
+   }
 }
 button {
     padding: 10px 20px;
