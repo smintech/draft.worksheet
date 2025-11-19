@@ -2,7 +2,7 @@ let colors = ["red", "blue", "green", "orange", "purple"];
 let index = 0;
 let intervalId = null;
 
-document.getElementById("startBtn").addEventListener("click", () => {
+document.getElementById("changeColorBtn").addEventListener("click", () => {
     if (intervalId !== null) return;
 
     intervalId = setInterval(() => {
@@ -15,7 +15,7 @@ document.getElementById("startBtn").addEventListener("click", () => {
     }, 1000);
 });
 
-document.getElementById("stopBtn").addEventListener("click", () => {
+document.getElementById("changeColorBtn").addEventListener("click", () => {
     clearInterval(intervalId);
     intervalId = null;
 });
