@@ -1,17 +1,9 @@
-let colors = ["red", "blue", "green", "orange", "purple"];
-let index = 0;
-document.getElementById("changeColorBtn"){
+const colors = ["#ffc60b", "#ff6666", "#90a0d6", "#4a4a4a"];
+const body = document.getElementById("changeColorBtn");
+let colorIndex = 0;
 
-setInterval(function() {
-    document.body.style.backgroundColor = colors[index];
-    index++;
-    if (index === colors.length) index = 0;
-}1000);
-document.getElementById("changeColorBtn"){
-
-setInterval(function() {
-        document.body.style.backgroundColor = colors[index];
-        index++;
-        if (index === colors.length) index = 0;
-    }, 1000);
-});
+function changeColor() {
+  body.style.backgroundColor = colors[colorIndex];
+  colorIndex = (colorIndex + 1) % colors.length;
+}
+setInterval(changeColor,1000);
