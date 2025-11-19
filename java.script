@@ -1,17 +1,21 @@
-document.getElementById("changeTextBtn").onclick = function() {
-    document.getElementById("title").innerText = "Text Changed!";
-}
-document.getElementById("changeColorBtn").onclick = function() {
-    document.body.style.backgroundColor = "#f0c000";
-}
 let colors = ["red", "blue", "green", "orange", "purple"];
 let index = 0;
+let intervalId = null;
 
-setInterval(function() {
-    document.body.style.backgroundColor = colors[index];
+document.getElementById("startBtn").addEventListener("click", () => {
+    if (intervalId !== null) return;
 
-    index++;
-    if (index === colors.length) {
-        index = 0;
-    }
-}, 1000);
+    intervalId = setInterval(() => {
+        document.body.style.backgroundColor = colors[index];
+
+        index++;
+        if (index === colors.length) {
+            index = 0;
+        }
+    }, 1000);
+});
+
+document.getElementById("stopBtn").addEventListener("click", () => {
+    clearInterval(intervalId);
+    intervalId = null;
+});
