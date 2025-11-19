@@ -1,9 +1,1 @@
-const colors = ["#ffc60b", "#ff6666", "#90a0d6", "#4a4a4a"];
-const body = document.getElementById("changeColorBtn");
-let colorIndex = 0;
-
-function changeColor() {
-  body.style.backgroundColor = colors[colorIndex];
-  colorIndex = (colorIndex + 1) % colors.length;
-}
-setInterval(changeColor, 1000);
+j
