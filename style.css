@@ -2,13 +2,8 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin-top: 50px;
-    animation: color-animation 10s infinite;
-}
-@keyframes color-animation {
-  0% { background-color: #ffc60b; }
-  33% { background-color: #ff6666; }
-  66% { background-color: #90a0d6; }
-  100% { background-color: #ffc60b; }
+    background: white, black, orange, blue;
+    animation: bg 10s infinite;
 }
 button {
     padding: 10px 20px;
