@@ -1,1 +1,14 @@
-j
+document.getElementById("loadBtn").addEventListener("click", () => {
+    fetch("users.json")
+        .then(response => response.json())
+        .then(data => {
+            const ul = document.getElementById("userList");
+            ul.innerHTML = "";
+            data.forEach(user => {
+                const li = document.createElement("li");
+                li.innerText = user.name + " - " + user.age;
+                ul.appendChild(li);
+            });
+        })
+        .catch(error => console.error("Error:", error));
+});
