@@ -21,8 +21,9 @@ document.getElementById("showName").addEventListener("click", () => {
     }
 });
 document.getElementById("showAge").addEventListener("click", () => {
-    let age = document.getElementById("").value;
-    if (name=="") {
-        document.getElementById("result").innerText ="please enter your name";
+    let age = document.getElementById("age").value;
+    if (age=="") {
+        document.getElementById("result").innerText ="please enter your age";
     } else {
-        document.getElementById("result").innerText = "your name is: " + name;
+        document.getElementById("result").innerText = "you are: " + age, "years old";
+        
