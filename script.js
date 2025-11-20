@@ -9,4 +9,5 @@ document.getElementById("LoadUser").addEventListener("click", () => {
             li.innerText = user.name + " - " + user.age;
             ul.appendChild(li);
         });
+    });
 });
