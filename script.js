@@ -32,7 +32,7 @@ const password = document.getElementById("password");
 const showpassword = document.getElementById("showpassword");
 
     password.addEventListener("input", () => {
-    const words = password.value;
+    const words = passwordinput.value;
     
     if (words === "") {
         showpassword.innerText = "Start typing your password...";
