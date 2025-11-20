@@ -14,5 +14,5 @@ document.getElementById("LoadUser").addEventListener("click", () => {
 });
 document.getElementById("showName").addEventListener("click", () => {
     let name = document.getElementById("surname").value;
-    document.getElementById("result").innerText = "Your name is: " + name;
+    document.getElementById("result").innerText = "your name is: " + name;
 });
