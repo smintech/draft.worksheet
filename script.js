@@ -32,9 +32,9 @@ const password = document.getElementById("password");
 const showpassword = document.getElementById("showpassword");
 
     password.addEventListener("input", () => {
-    const password = password.value;
+    const words = password.value;
     
-    if (password === "") {
+    if (words === "") {
         showpassword.innerText = "Start typing your password...";
     } else {
         showpassword.innerText = "your password , " + password + "accepted!";
