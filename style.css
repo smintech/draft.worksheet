@@ -18,7 +18,9 @@ body {
    }
 }
 button {
-   display: fade;
+   background: none;
+   border:none;
+   color: black;
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
