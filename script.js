@@ -20,3 +20,9 @@ document.getElementById("showName").addEventListener("click", () => {
         document.getElementById("result").innerText = "your name is: " + name;
     }
 });
+document.getElementById("showAge").addEventListener("click", () => {
+    let age = document.getElementById("").value;
+    if (name=="") {
+        document.getElementById("result").innerText ="please enter your name";
+    } else {
+        document.getElementById("result").innerText = "your name is: " + name;
