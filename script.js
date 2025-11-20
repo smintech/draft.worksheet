@@ -33,6 +33,7 @@ const liveResult = document.getElementById("liveResult");
 
     password.addEventListener("input", () => {
     const password = password.value;
+    
     if (password === "") {
         liveResult.innerText = "Start typing your password...";
     } else {
