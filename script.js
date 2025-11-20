@@ -1,5 +1,5 @@
 document.getElementById("LoadUser").addEventListener("click", () => {
-    fetch("https://raw.githubusercontent.com/smintech/draft.worksheet/main/users.json")
+    fetch("users.json")
         .then(response => response.json())
         .then(data => {
             const ul = document.getElementById("userlist");
