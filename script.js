@@ -28,11 +28,11 @@ document.getElementById("showAgebtn").addEventListener("click", () => {
         document.getElementById("ageresult").innerText = "you are: " + age + " years old.";
     }
 });
-document.getElementById("showPasswordbtn").addEventListener("input", () => {
+document.getElementById("showPasswordbtn").liveresult("input", () => {
     let password = document.getElementById("password").value;
     if (password=="") {
         document.getElementById("showpassword ").innerText ="please enter password";
     } else {
-        document.getElementById("showpassword").innerText = "your name is: " + password;
+        document.getElementById("showpassword").innerText = "your password is: " + password;
     }
 });
