@@ -37,6 +37,6 @@ const showpassword = document.getElementById("showpassword");
     if (words === "") {
         showpassword.innerText = "Start typing your password...";
     } else {
-        showpassword.innerText = "your password , " + password + "accepted!";
+        showpassword.innerText = "your password , " + words + "accepted!";
     }
 });
