@@ -12,3 +12,7 @@ document.getElementById("LoadUser").addEventListener("click", () => {
             });
         });
 });
+document.getElementById("showName").addEventListener("click", () => {
+    let name = document.getElementById("username").value;
+    document.getElementById("result").innerText = "Your name is: " + name;
+});
