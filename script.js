@@ -29,14 +29,14 @@ document.getElementById("showAgebtn").addEventListener("click", () => {
     }
 });
 const password = document.getElementById("password");
-const liveResult = document.getElementById("liveResult");
+const showpassword = document.getElementById("showpassword");
 
     password.addEventListener("input", () => {
     const password = password.value;
     
     if (password === "") {
-        liveResult.innerText = "Start typing your password...";
+        showpassword.innerText = "Start typing your password...";
     } else {
-        liveResult.innerText = "your password , " + password + "accepted!";
+        showpassword.innerText = "your password , " + password + "accepted!";
     }
 });
