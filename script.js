@@ -25,6 +25,6 @@ document.getElementById("showAge").addEventListener("click", () => {
     if (age=="") {
         document.getElementById("ageresult").innerText ="please enter your age";
     } else {
-        document.getElementById("ageresult").innerText = "you are: " + age, + "years old";
+        document.getElementById("ageresult").innerText = "you are: " + age, + " years old.";
     }
 });
