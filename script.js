@@ -12,7 +12,7 @@ document.getElementById("LoadUser").addEventListener("click", () => {
             });
         });
 });
-document.getElementById("showName").addEventListener("click", () => {
+document.getElementById("showNamebtn").addEventListener("click", () => {
     let name = document.getElementById("surname").value;
     if (name=="") {
         document.getElementById("result").innerText ="please enter your name";
@@ -20,7 +20,7 @@ document.getElementById("showName").addEventListener("click", () => {
         document.getElementById("result").innerText = "your name is: " + name;
     }
 });
-document.getElementById("showAge").addEventListener("click", () => {
+document.getElementById("showAgebtn").addEventListener("click", () => {
     let age = document.getElementById("age").value;
     if (age=="") {
         document.getElementById("ageresult").innerText ="please enter your age";
@@ -28,7 +28,7 @@ document.getElementById("showAge").addEventListener("click", () => {
         document.getElementById("ageresult").innerText = "you are: " + age + " years old.";
     }
 });
-document.getElementById("showPassword").addEventListener("input", () => {
+document.getElementById("showPasswordbtn").addEventListener("input", () => {
     let password = document.getElementById("password").value;
     if (password=="") {
         document.getElementById("showpassword ").innerText ="please enter password";
