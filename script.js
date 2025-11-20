@@ -30,8 +30,9 @@ document.getElementById("showAgebtn").addEventListener("click", () => {
 });
 const password = document.getElementById("password");
 const liveResult = document.getElementById("liveResult");
+
     password.addEventListener("input", () => {
-    const password= password.value;
+    const password = password.value;
     if (password === "") {
         liveResult.innerText = "Start typing your password...";
     } else {
