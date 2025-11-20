@@ -4,7 +4,7 @@ document.getElementById("LoadUser").addEventListener("click", () => {
     .then(data => {
         const ul = document.getElementById("userlist");
         ul.innerHTML = "";
-        users.forEach(user => {
+        data.forEach(user => {
             const li = document.createElement("li");
             li.innerText = user.name + " - " + user.age;
             ul.appendChild(li);
