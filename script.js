@@ -23,7 +23,8 @@ document.getElementById("showName").addEventListener("click", () => {
 document.getElementById("showAge").addEventListener("click", () => {
     let age = document.getElementById("age").value;
     if (age=="") {
-        document.getElementById("result").innerText ="please enter your age";
+        document.getElementById("ageresult").innerText ="please enter your age";
     } else {
-        document.getElementById("result").innerText = "you are: " + age, "years old";
-        
+        document.getElementById("ageresult").innerText = "you are: " + age, "years old";
+    }
+});
