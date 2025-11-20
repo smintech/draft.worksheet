@@ -28,15 +28,15 @@ document.getElementById("showAgebtn").addEventListener("click", () => {
         document.getElementById("ageresult").innerText = "you are: " + age + " years old.";
     }
 });
-const password = document.getElementById("password");
-const showpassword = document.getElementById("showpassword");
+const passwordinput = document.getElementById("password");
+const showPassword = document.getElementById("showpassword");
 
-    password.addEventListener("input", () => {
+    passwordinput.addEventListener("input", () => {
     const words = passwordinput.value;
     
     if (words === "") {
-        showpassword.innerText = "Start typing your password...";
+        showPassword.innerText = "Start typing your password...";
     } else {
-        showpassword.innerText = "your password , " + words + "accepted!";
+        showPassword.innerText = "your password , " + words + "accepted!";
     }
 });
