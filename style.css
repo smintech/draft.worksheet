@@ -26,3 +26,10 @@ button {
     margin: 10px;
     cursor: pointer;
 }
+input {
+      background: white;
+      width: 200px;
+      height: 20px;
+      color: white;
+      border-radius: 10px;
+}
