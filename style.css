@@ -37,6 +37,6 @@ input {
 img {
     width: 600px;
     height: 700px;
-    position: absolute;
+    position: center;
     top: 0px;   
 }
