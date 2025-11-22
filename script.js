@@ -40,4 +40,4 @@ const showPassword = document.getElementById("showpassword");
         showPassword.innerText = "your password :" + words + " accepted!";
     }
 });
-const onlinedata = document.getElement
+const onlinedata = document.getElementById("fetchDatabtn");
