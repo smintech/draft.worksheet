@@ -64,8 +64,8 @@ function fetchWeather() {
            weatherDiv.innerText = "Error fetching current weather!";
         });
 }
-getPrice("Bitcoin");
-getPrice("Toncoin");
+getPrice("bitcoin");
+getPrice("toncoin");
 fetchWeather();
 refreshDatabtn.addEventListener("click", () => {
     getPrice("Bitcoin");
