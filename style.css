@@ -22,10 +22,7 @@ h2 {
 div {
     background-color: grey;
 }
-.bitcoin {
-    font-size: 30px;
-}
-.weather {
+bitcoin, weather {
     font-size: 30px;
 }
 button {
