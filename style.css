@@ -10,7 +10,12 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
-
+h2 {
+    display: outline-block;
+    background-color: black;
+    font-size: 50px;
+    font-weight: bold;
+}
 button {
     background: none;
     border:none;
