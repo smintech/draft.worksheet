@@ -45,4 +45,7 @@ const weather =document.getElementById("weatherbtn");
     fetch("https://www.coingecko.com/")
          .then(response => response.https://www.coingecko.com/())
          .then(data => {
-            const 
+            const ul = document.getElementById("datacharts");
+            ul.innerHTML = "";
+            
+            data.foreach
