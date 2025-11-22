@@ -44,8 +44,8 @@ const priceDiv = document.getElementById("price");
 const weatherDiv = document.getElementById("weather");
 const refreshbtn= document.getElementById("refreshDatabtn");
 function getPrice(coinId) {
-    const apiUrl = `https://api.coingecko.com/api/v3/simple/price?ids=${together}&vs_currencies=usd`;
     const together = coinId.join(",");
+    const apiUrl = `https://api.coingecko.com/api/v3/simple/price?ids=${together}&vs_currencies=usd`;
     
     fetch(apiUrl)
         .then(response => {
@@ -69,10 +69,6 @@ function getPrice(coinId) {
            priceDiv.innerText = "Error fetching crypto price!";
     });
 }
-document.addEventListener("DOMContentLoaded", function() {
-    const coinprices = ['bitcoin','the-open-network'];
-    getPrice(coinprices);
-});
 function fetchWeather() {
     fetch("https://api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&current_weather=true")
         .then(response => response.json())
@@ -83,8 +79,13 @@ function fetchWeather() {
            weatherDiv.innerText = "Error fetching current weather!";
         });
 }
-fetchWeather();
-refreshDatabtn.addEventListener("click", () => {
+document.addEventListener("DOMContentLoaded", function() {
+    const coinprices = ['bitcoin','the-open-network'];
     getPrice(coinprices);
     fetchWeather();
+    
+    refreshDatabtn.addEventListener("click", () => {
+    getPrice(coinprices);
+    fetchWeather();
+    });
 });
