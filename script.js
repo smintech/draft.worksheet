@@ -43,8 +43,8 @@ const showPassword = document.getElementById("showpassword");
 const priceDiv = document.getElementById("price");
 const weatherDiv = document.getElementById("weather");
 const refreshbtn= document.getElementById("refreshDatabtn");
-function fetchCrypto(coin) {
-    fetch("https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=usd")
+function getPrice(coin) {
+    get("https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=usd")
         .then(response => response.json())
         .then(data => {
              document.getElementById("price").innerText = 
