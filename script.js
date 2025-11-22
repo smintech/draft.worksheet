@@ -47,9 +47,14 @@ function getPrice(coin) {
     fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=usd`)
         .then(response => response.json())
         .then(data => {
-             document.getElementById("price").innerText = 
-            coin + " price: $ " + data[coin].usd;
-        })
+            priceDiv.innerHTML = ",";
+            coin.split(",").forEach(coin => {
+                if (data[coin]) {
+                    priceDiv.innerHTML += `${coin} price: $${data[coin].usd} <br>`;
+                } else {
+                    priceDiv.innerHTML += `${coin} not found <br>`;
+                }
+        });
         .catch (err => {
            priceDiv.innerText = "Error fetching crypto price!";
         });
