@@ -68,6 +68,7 @@ getPrice("Bitcoin");
 getPrice("Toncoin");
 fetchWeather();
 refreshDatabtn.addEventListener("click", () => {
-    fetchCrypto();
+    getPrice("Bitcoin");
+    getPrice("Toncoin");
     fetchWeather();
 });
