@@ -10,11 +10,16 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
-tittle2 {
+ h2 {
     display: outline-block;
     background-color: black;
     font-size: 50px;
     font-weight: bold;
+}
+h2 {
+    margin: 0px;
+    text-align: center;
+    padding:0 px;
 }
 button {
     background: none;
