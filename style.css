@@ -10,13 +10,13 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
- div h2 {
+.tittle h2 {
     display: block;
     background-color: black;
     font-size: 50px;
     font-weight: bold;
 }
-div h2 {
+.tittle h2 {
     margin: 0px;
     text-align: center;
     padding:0 px;
