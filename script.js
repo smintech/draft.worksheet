@@ -63,5 +63,9 @@ function fetchWeather() {
            weatherDiv.innerText = "error fetching weather!";
         });
 }
-fetchCrypto()
-fetchWeather()
+fetchCrypto();
+fetchWeather();
+refreshDatabtn.addEventListener("click", () => {
+    fetchCrypto();
+    fetchWeather();
+});
