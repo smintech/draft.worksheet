@@ -49,10 +49,7 @@ function getPrice(coins) {
         .then(data => {
             priceDiv.innerHTML = ",";
             coin.split(",").forEach(coin => {
-            if (data[coin]) {
                 priceDiv.innerHTML += `${coin} price: $${data[coin].usd} <br>`;
-            } else {
-                priceDiv.innerHTML += `${coin} not found <br>`;
             }
         });
         .catch (err => {
