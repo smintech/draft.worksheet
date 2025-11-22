@@ -40,8 +40,8 @@ const showPassword = document.getElementById("showpassword");
         showPassword.innerText = "your password :" + words + " accepted!";
     }
 });
-const bitcoin = document.getElementById("bitcoinbtn");
-const weather =document.getElementById("weatherbtn");
+const bitcoinDiv = document.getElementById("bitcoin");
+const weatherDiv =document.getElementById("weather");
     fetch("https://www.coingecko.com/")
          .then(response => response.https://www.coingecko.com/())
          .then(data => {
