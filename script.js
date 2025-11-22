@@ -42,6 +42,7 @@ const showPassword = document.getElementById("showpassword");
 });
 const bitcoinDiv = document.getElementById("bitcoin");
 const weatherDiv = document.getElementById("weather");
+const toncoinDiv = document.getElementById("toncoin");
 const refreshbtn= document.getElementById("refreshDatabtn");
 function fetchCrypto() {
     fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
@@ -50,7 +51,17 @@ function fetchCrypto() {
              bitcoinDiv.innerText = "Bitcoin price: $ " + data.bitcoin.usd;
         })
         .catch (err => {
-           bitcoinDiv.innerText = "error fetching bitcoin!";
+           bitcoinDiv.innerText = "Error fetching bitcoin price!";
+        });
+}
+function fetchCrypto() {
+    fetch("https://api.coingecko.com/api/v3/simple/price?ids=toncoin&vs_currencies=usd")
+        .then(response => response.json())
+        .then(data => {
+             toncoinDiv.innerText = "Toncoin price: $ " + data.toncoin.usd;
+        })
+        .catch (err => {
+           toncoinDiv.innerText = "Error fetching toncoin!";
         });
 }
 function fetchWeather() {
@@ -60,7 +71,7 @@ function fetchWeather() {
              weatherDiv.innerText = "London temp: " + data.current_weather.temperature + "°C";
         })
         .catch (err => {
-           weatherDiv.innerText = "error fetching weather!";
+           weatherDiv.innerText = "Error fetching current weather!";
         });
 }
 fetchCrypto();
