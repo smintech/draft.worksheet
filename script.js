@@ -47,7 +47,7 @@ function getPrice(coin) {
     fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=usd`)
         .then(response => response.json())
         .then(data => {
-            priceDiv.innerHTML = ",";
+            priceDiv.innerHTML = "";
             coin.split(",").forEach(coin => {
                 priceDiv.innerHTML += `${coin} price: $${data[coin].usd} <br>`;
             }
