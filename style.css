@@ -10,7 +10,7 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
-div {
+div h2 {
     display: outline-block;
     background-color: black;
     font-size: 50px;
