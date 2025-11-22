@@ -44,14 +44,14 @@ const priceDiv = document.getElementById("price");
 const weatherDiv = document.getElementById("weather");
 const refreshbtn= document.getElementById("refreshDatabtn");
 function getPrice(coin) {
-    get("https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=usd")
+    fetch("https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=usd")
         .then(response => response.json())
         .then(data => {
              document.getElementById("price").innerText = 
             coin + " price: $ " + data.[coin].usd;
         })
         .catch (err => {
-           bitcoinDiv.innerText = "Error fetching crypto price!";
+           priceDiv.innerText = "Error fetching crypto price!";
         });
 }
 function fetchWeather() {
