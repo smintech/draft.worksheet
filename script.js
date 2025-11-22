@@ -61,7 +61,7 @@ function getPrice(coinId) {
                     if (data[coin] && data[coin].usd) {
                     priceDiv.innerHTML += `${coin} price: $${data[coin].usd} <br>`;
                 } else {
-                    priceDiv.innerHTML += `Could not find price for ${coinId}. <br>`;
+                    priceDiv.innerHTML += `Could not find price for ${coin}. <br>`;
                 }
             });
         })
