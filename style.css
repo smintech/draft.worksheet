@@ -24,6 +24,7 @@ div {
 }
 bitcoin, weather {
     font-size: 30px;
+    font-weight: bold;
 }
 button {
     background: none;
