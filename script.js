@@ -47,10 +47,21 @@ function fetchCrypto() {
     fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
         .then(response => response.json())
         .then(data => {
-             bitcoinDiv.innerText = "Bitcoin price: $" + data.bitcoin.usd;
+             bitcoinDiv.innerText = "Bitcoin price: $ " + data.bitcoin.usd;
         })
         .catch (err => {
            bitcoinDiv.innerText = "error fetching bitcoin!";
         });
 }
+function fetchWeather() {
+    fetch("https://api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&current_weather=true")
+        .then(response => response.json())
+        .then(data => {
+             weatherDiv.innerText = "London temp: " + data.current_weather.temperature + "°C";
+        })
+        .catch (err => {
+           weatherDiv.innerText = "error fetching weather!";
+        });
+}
 fetchCrypto()
+fetchWeather()
