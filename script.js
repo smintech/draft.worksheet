@@ -41,11 +41,12 @@ const showPassword = document.getElementById("showpassword");
     }
 });
 const bitcoinDiv = document.getElementById("bitcoin");
-const weatherDiv =document.getElementById("weather");
-    fetch("https://www.coingecko.com/")
-         .then(response => response.https://www.coingecko.com/())
-         .then(data => {
-            const ul = document.getElementById("datacharts");
-            ul.innerHTML = "";
-            
-            data.foreach
+const weatherDiv = document.getElementById("weather");
+const refreshbtn= document.getElementById("refreshDatabtn");
+function fetchCrypto() {
+    fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
+        .then(response => response.json())
+        .then(data => {
+             bitcoinDiv.innerText = "Bitcoin price: $" + data.bitcoin.usd;
+        })
+}
