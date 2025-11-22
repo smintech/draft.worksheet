@@ -48,7 +48,7 @@ function getPrice(coin) {
         .then(response => response.json())
         .then(data => {
              document.getElementById("price").innerText = 
-            coin + " price: $ " + data.[coin].usd;
+            coin + " price: $ " + data[coin].usd;
         })
         .catch (err => {
            priceDiv.innerText = "Error fetching crypto price!";
