@@ -43,17 +43,23 @@ const showPassword = document.getElementById("showpassword");
 const priceDiv = document.getElementById("price");
 const weatherDiv = document.getElementById("weather");
 const refreshbtn= document.getElementById("refreshDatabtn");
-function getPrice(coin) {
-    fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=usd`)
-        .then(response => response.json())
-        .then(data => {
-            priceDiv.innerHTML = "";
-            coin.split(",").forEach(c => {
-                coin.split(",").forEach(c => {
-                if (data[c] && data[c].usd) {
-                    priceDiv.innerHTML += `${c} price: $${data[c].usd} <br>`;
+function getPrice(coinId) {
+    const apiUrl = `https://api.coingecko.com/api/v3/simple/price?ids=${coinId}&vs_currencies=usd`;
+
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Error: ${response.status} ${response.statusText}`);
             }
-        });
+            return response.json();
+        })
+        .then(data => {
+            if (data[coinId] && data[coinId].usd) {
+                priceDiv.innerHTML = `${coinId} price: $${data[coinId].usd}`;
+            } else {
+                priceDiv.innerText = `Could not find price for ${coinId}.`;
+            }
+        })
         .catch (err => {
            priceDiv.innerText = "Error fetching crypto price!";
     });
@@ -68,11 +74,11 @@ function fetchWeather() {
            weatherDiv.innerText = "Error fetching current weather!";
         });
 }
-getPrice("bitcoin");
-getPrice("toncoin");
+getPrice('bitcoin');
+getPrice('toncoin');
 fetchWeather();
 refreshDatabtn.addEventListener("click", () => {
-    getPrice("bitcoin");
-    getPrice("toncoin");
+    getPrice('bitcoin');
+    getPrice('toncoin');
     fetchWeather();
 });
