@@ -69,7 +69,10 @@ function getPrice(coinId) {
            priceDiv.innerText = "Error fetching crypto price!";
     });
 }
-const coinprices = ['bitcoin','the-open-network'];
+document.addEventListener("DOMContentLoaded", function() {
+    const coinprices = ['bitcoin','the-open-network'];
+    getPrice(coinprices);
+});
 function fetchWeather() {
     fetch("https://api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&current_weather=true")
         .then(response => response.json())
@@ -80,7 +83,6 @@ function fetchWeather() {
            weatherDiv.innerText = "Error fetching current weather!";
         });
 }
-getPrice(coinprices)
 fetchWeather();
 refreshDatabtn.addEventListener("click", () => {
     getPrice(coinprices);
