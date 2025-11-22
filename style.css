@@ -13,14 +13,10 @@ body {
 h2 {
     display: block;
     background-color: black;
-    font-size: 50px;
+    font-size: 100px;
     font-weight: bold;
     height: 200px;
-}
-h2 {
-    margin: 0px;
     text-align: center;
-    padding:0 px;
 }
 button {
     background: none;
@@ -40,6 +36,7 @@ input {
 }
 img {
     width: 600px;
-   height: 700px;
-   margin-top: 0px;
+    height: 700px;
+    position: absolute;
+    top: 0px;   
 }
