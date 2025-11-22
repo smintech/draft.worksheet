@@ -43,21 +43,21 @@ const showPassword = document.getElementById("showpassword");
 const priceDiv = document.getElementById("price");
 const weatherDiv = document.getElementById("weather");
 const refreshbtn= document.getElementById("refreshDatabtn");
-function getPrice(coin) {
-    fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=usd`)
+function getPrice(coins) {
+    fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${coins}&vs_currencies=usd`)
         .then(response => response.json())
         .then(data => {
             priceDiv.innerHTML = ",";
             coin.split(",").forEach(coin => {
-                if (data[coin]) {
-                    priceDiv.innerHTML += `${coin} price: $${data[coin].usd} <br>`;
-                } else {
-                    priceDiv.innerHTML += `${coin} not found <br>`;
-                }
+            if (data[coin]) {
+                priceDiv.innerHTML += `${coin} price: $${data[coins].usd} <br>`;
+            } else {
+                priceDiv.innerHTML += `${coin} not found <br>`;
+            }
         });
         .catch (err => {
            priceDiv.innerText = "Error fetching crypto price!";
-        });
+    });
 }
 function fetchWeather() {
     fetch("https://api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&current_weather=true")
