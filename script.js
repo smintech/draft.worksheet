@@ -49,4 +49,8 @@ function fetchCrypto() {
         .then(data => {
              bitcoinDiv.innerText = "Bitcoin price: $" + data.bitcoin.usd;
         })
+        .catch (err => {
+           bitcoinDiv.innerText = "error fetching bitcoin!";
+        });
 }
+fetchCrypto()
