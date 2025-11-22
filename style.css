@@ -17,6 +17,7 @@ h2 {
     font-weight: bold;
     height: 200px;
     text-align: center;
+    margin: 0;
 }
 button {
     background: none;
