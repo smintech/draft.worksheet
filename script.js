@@ -48,8 +48,10 @@ function getPrice(coin) {
         .then(response => response.json())
         .then(data => {
             priceDiv.innerHTML = "";
-            coin.split(",").forEach(coin => {
-                priceDiv.innerHTML += `${coin} price: $${data[coin].usd} <br>`;
+            coin.split(",").forEach(c => {
+                coin.split(",").forEach(c => {
+                if (data[c] && data[c].usd) {
+                    priceDiv.innerHTML += `${c} price: $${data[c].usd} <br>`;
             }
         });
         .catch (err => {
