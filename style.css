@@ -22,6 +22,12 @@ h2 {
 div {
     background-color: grey;
 }
+.bitcoin {
+    font-size: 30px;
+}
+.weather {
+    font-size: 30px;
+}
 button {
     background: none;
     border:none;
