@@ -75,10 +75,10 @@ function fetchWeather() {
         });
 }
 getPrice('bitcoin');
-getPrice('toncoin');
+getPrice('the-open-network');
 fetchWeather();
 refreshDatabtn.addEventListener("click", () => {
     getPrice('bitcoin');
-    getPrice('toncoin');
+    getPrice('the-open-network');
     fetchWeather();
 });
