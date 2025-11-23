@@ -76,9 +76,9 @@ function fetchWeather() {
             temp = data.current_weather.temperature;
             let message = "";
             
-            if (temp >= 15) {
-                message = "comfortable";
-            } else if (temp <= 30) {
+            if (temp >= 20) {
+                message = "cloudy";
+            } else if (temp >= 30) {
                 message = "its cool and warm! likely sunny";
             } else {
                 message = "Hot! hot sun";
