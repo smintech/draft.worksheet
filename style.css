@@ -49,7 +49,7 @@ img {
     top: 0px;
 }
 myiglink {
-    display: inline-block;
+    position: relative;
 }
 overlay {
     font-size: 30px;
