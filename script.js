@@ -78,8 +78,7 @@ function fetchWeather() {
             
             if (temp < 10) {
                 message = "overcast! dark sky";
-            }
-            else if (temp >= 20) {
+            } else if (temp >= 20) {
                 message = "partly cloudy";
             } else if (temp >= 30) {
                 message = "its cool and warm! likely sunny";
