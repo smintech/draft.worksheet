@@ -76,7 +76,7 @@ function fetchWeather() {
             temp = data.current_weather.temperature;
             let message = "";
             
-            if (temp == 0) {
+            if (temp < 10) {
                 message = "overcast! dark sky";
             }
             else if (temp >= 20) {
