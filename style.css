@@ -55,7 +55,7 @@ myiglink {
 overlay {
     position: absolute;
     bottom: 10px;
-    left: 50%;
+    left: 40%%;
     transform: translateX(-50%);
     color: grey;
 }
