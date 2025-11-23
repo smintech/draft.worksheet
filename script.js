@@ -101,3 +101,13 @@ document.addEventListener("DOMContentLoaded", function() {
     fetchWeather();
     });
 });
+const menuBtn = document.getElementById("menubtn");
+const menu = document.querySelector(".menu");
+
+menubtn.addEventListener("click", () => {
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+});
