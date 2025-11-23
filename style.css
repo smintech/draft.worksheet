@@ -57,7 +57,7 @@ img {
 #myIG {
     position: absolute;
     top: 83%;
-    left: 60%;
+    left: 61%;
     transform: translate(0, 50%);
     border-radius:10px;
     font-size: 60px;
@@ -67,3 +67,15 @@ img {
     text-decoration: none;
     text-align: center;
 }
+#myTikTok {position: absolute;
+    top: 10%;
+    left: 20%;
+    transform: translate(0, 50%);
+    border-radius:10px;
+    font-size: 60px;
+    font-weight: bold;
+    color: #6699CC;
+    background-color: white;
+    text-decoration: none;
+    text-align: center;
+
