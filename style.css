@@ -48,10 +48,10 @@ img {
     position: center;
     top: 0px;
 }
-myiglink {
+.myiglink {
     position: relative;
 }
-myIG {
+#myIG {
     position: absolute;
     font-size: 60px;
     font-weight: bold;
