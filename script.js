@@ -78,7 +78,7 @@ function fetchWeather() {
             
             if (temp >= 15) {
                 message = "comfortable";
-            } else if (weatherDiv <= 30) {
+            } else if (temp <= 30) {
                 message = "its cool and warm! likely sunny";
             } else {
                 message = "Hot! hot sun";
