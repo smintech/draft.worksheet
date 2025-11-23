@@ -74,7 +74,6 @@ function fetchWeather() {
         .then(response => response.json())
         .then(data => {
             let message = "";
-             weatherDiv.innerText = "Ikotun lagos weather: " + data.current_weather.temperature + "°C";
             
             if (weather >= 15) {
                 message.innerText = "comfortable";
