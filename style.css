@@ -59,7 +59,7 @@ img {
 }
 .myIG span {
         display: block;
-        background-color: grey;
+        color: grey;
         text-align: left;
         margin-bottom: 10px;
 }
