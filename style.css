@@ -54,11 +54,12 @@ img {
 }
 #myIG {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 30%;
+    left: 30%;
     font-size: 30px;
     font-weight: bold;
     color: grey;
+    background-color: grey;
     text-decoration: none;
     text-align: center;
 }
