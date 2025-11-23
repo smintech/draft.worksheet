@@ -50,6 +50,7 @@ img {
 }
 .myiglink {
     position: relative;
+    transform: translate(0,90%);
 }
 #myIG {
     position: absolute;
