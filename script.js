@@ -73,19 +73,21 @@ function fetchWeather() {
     fetch("https://api.open-meteo.com/v1/forecast?latitude=6.54433&longitude=3.26379&current_weather=true")
         .then(response => response.json())
         .then(data => {
+            temp = data.current_weather.temperature;
             let message = "";
             
-            if (weatherDiv >= 15) {
-                message.innerText = "comfortable";
+            if (temp >= 15) {
+                message = "comfortable";
             } else if (weatherDiv <= 30) {
-                message.innerText = "its cool and warm! likely sunny";
-            } else (weatherDiv >= 45) {
-                message.innerText = "Hot! hot sun";
+                message = "its cool and warm! likely sunny";
+            } else {
+                message = "Hot! hot sun";
             }
-            weatherDiv.innerText = "Ikotun lagos weather: " + data.current_weather.temperature + "°C ~~" + message;
-        .catch (err => {
-           weatherDiv.innerText = "Error fetching current weather!";
-        });
+            weatherDiv.innerText = "Ikotun lagos weather: " + temp + "°C ~~" + message;
+            })
+            .catch (err => {
+               weatherDiv.innerText = "Error fetching current weather!";
+            });
 }
 document.addEventListener("DOMContentLoaded", function() {
     const coinprices = ['bitcoin','the-open-network'];
