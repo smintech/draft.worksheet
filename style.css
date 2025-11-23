@@ -49,9 +49,17 @@ img {
     top: 0px;   
 }
 .myIG {
-    display: inline-block;
-    background: grey;
+    display: block;
+    background-color: grey;
     padding: 20px;
     text-align: center;
-    margin-bottom: 20;
+    margin-bottom: 10px;
+    position: flex;
+}
+.myIG img {
+    display: block;
+    margin-bottom: 5px;
+}
+.myIG span {
+        display: block;
 }
