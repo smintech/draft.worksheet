@@ -11,12 +11,16 @@
 </head>
 <body>
 <nav>
-    <button id=menubtn">Menu</button>
-    <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-    </ul>
+  <button id="menu-toggle" aria-label="Open Menu">☰ Menu</button>
 </nav>
+<div id="sidebar-menu" class="sidebar">
+  <button id="close-menu" aria-label="Close Menu">✕ Close</button>
+  <ul class="menu-list">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+</div>
+<div id="overlay" class="overlay2"></div>
     <h1 id="title">For Educational Purpose📖</h1>
     <p id="description">This is a practice page for DOM manipulation.</p>
     <input type="text" id="surname" placeholder="Enter your name">
