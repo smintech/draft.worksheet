@@ -70,7 +70,7 @@ function getPrice(coinId) {
     });
 }
 function fetchWeather() {
-    fetch("https://api.open-meteo.com/v1/forecast?latitude=6.54433&longitude=-3.26379&current_weather=true")
+    fetch("https://api.open-meteo.com/v1/forecast?latitude=6.54433&longitude=3.26379&current_weather=true")
         .then(response => response.json())
         .then(data => {
             let message = "";
