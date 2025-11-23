@@ -51,7 +51,7 @@ img {
 myiglink {
     position: relative;
 }
-overlay {
+a {
     position: absolute;
     font-size: 100px;
     font-weight: bold;
