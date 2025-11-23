@@ -73,15 +73,17 @@ function fetchWeather() {
     fetch("https://api.open-meteo.com/v1/forecast?latitude=6.54433&longitude=-3.26379&current_weather=true")
         .then(response => response.json())
         .then(data => {
+            let message = "";
              weatherDiv.innerText = "Ikotun lagos weather: " + data.current_weather.temperature + "°C";
-        })
-        if (weather >= 15) {
-            weatherDiv.innerText = "comfortable";
-        } else if (weather <= 30) {
-            weatherDiv.innerText = "its cool and warm! likely sunny";
-        } else (weather >= 45) {
-            weatherDiv.innerText = "Hot! hot sun";
-        }
+            
+            if (weather >= 15) {
+                message.innerText = "comfortable";
+            } else if (weather <= 30) {
+                message.innerText = "its cool and warm! likely sunny";
+            } else (weather >= 45) {
+                message.innerText = "Hot! hot sun";
+            }
+            weatherDiv.innerText = "Ikotun lagos weather: " + data.current_weather.temperature + "°C ~~" + message;
         .catch (err => {
            weatherDiv.innerText = "Error fetching current weather!";
         });
