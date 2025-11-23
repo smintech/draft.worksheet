@@ -50,11 +50,8 @@ img {
 }
 .myIG {
     display: block;
-    background-color: grey;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 10px;
-    position: flex;
+    padding: 10px;
+    position: left;
 }
 .myIG img {
     display: block;
@@ -62,4 +59,7 @@ img {
 }
 .myIG span {
         display: block;
+        background-color: grey;
+        text-align: left;
+        margin-bottom: 10px;
 }
