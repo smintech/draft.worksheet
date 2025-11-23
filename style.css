@@ -52,6 +52,7 @@ myiglink {
     position: relative;
 }
 overlay {
+    position: absolute;
     font-size: 30px;
     bottom: 5px;
     left: 45%%;
