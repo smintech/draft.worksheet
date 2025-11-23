@@ -10,6 +10,9 @@ body {
     font-size: 50px;
     font-weight: 20%;
 }
+body, html {
+    overflow: auto;
+}
 h2 {
     display: block;
     background-color: black;
