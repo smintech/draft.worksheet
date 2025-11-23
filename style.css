@@ -49,12 +49,10 @@ img {
     top: 0px;
 }
 myiglink {
-    position: relative;
     display: inline-block;
 }
 overlay {
-    position: absolute;
-    bottom: 10px;
+    bottom: 5px;
     left: 40%%;
     transform: translateX(-50%);
     color: grey;
