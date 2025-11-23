@@ -71,7 +71,7 @@ img {
 #myTikTok {
     position: absolute;
     top: -4%;
-    left: 1%;
+    left: 0.5%;
     transform: translate(0, 50%);
     border-radius:10px;
     font-size: 60px;
