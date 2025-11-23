@@ -56,11 +56,11 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(30%,30%);
+    transform: translate(5%,5%);
     font-size: 30px;
     font-weight: bold;
     color: #6699CC;
-    background-color: grey;
+    background-color: white;
     text-decoration: none;
     text-align: center;
 }
