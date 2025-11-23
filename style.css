@@ -54,6 +54,7 @@ myiglink {
 overlay {
     position: absolute;
     font-size: 30px;
+    font-weight: bold;
     bottom: 5px;
     left: 45%%;
     transform: translateX(-50%);
