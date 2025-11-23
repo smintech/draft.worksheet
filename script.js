@@ -76,8 +76,11 @@ function fetchWeather() {
             temp = data.current_weather.temperature;
             let message = "";
             
-            if (temp >= 20) {
-                message = "cloudy";
+            if (temp == 0) {
+                message = "overcast! dark sky";
+            }
+            else if (temp >= 20) {
+                message = "partly cloudy";
             } else if (temp >= 30) {
                 message = "its cool and warm! likely sunny";
             } else {
