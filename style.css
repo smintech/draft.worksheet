@@ -48,3 +48,10 @@ img {
     position: center;
     top: 0px;   
 }
+.MY IG {
+    display: inline-block;
+    background: grey;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20;
+}
