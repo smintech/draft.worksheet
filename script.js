@@ -75,11 +75,11 @@ function fetchWeather() {
         .then(data => {
              weatherDiv.innerText = "Ikotun lagos weather: " + data.current_weather.temperature + "°C";
         })
-        if (weather > 15) {
+        if (weather >= 15) {
             weatherDiv.innerText = "comfortable";
-        } else if (weather > 30) {
+        } else if (weather <= 30) {
             weatherDiv.innerText = "its cool and warm! likely sunny";
-        } else if (weather > 45) {
+        } else (weather >= 45) {
             weatherDiv.innerText = "Hot! hot sun";
         }
         .catch (err => {
