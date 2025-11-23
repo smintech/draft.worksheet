@@ -43,23 +43,20 @@ input {
       border-radius: 10px;
 }
 img {
+    display: block;
     width: 600px;
     height: 700px;
     position: center;
-    top: 0px;   
+    top: 0px;
 }
-.myIG {
-    display: block;
-    padding: 10px;
-    position: left;
+myiglink {
+    position: relative;
+    display: inline-block;
 }
-.myIG img {
-    display: block;
-    margin-bottom: 5px;
-}
-.myIG span {
-        display: block;
-        color: grey;
-        text-align: left;
-        margin-bottom: 10px;
+overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: grey;
 }
