@@ -123,6 +123,10 @@ img {
   padding-left: 20px;
   margin-left: 0;
 }
+#menu-toggle {
+    top: -5%;
+    left: 61%;
+}
 #menu-toggle, #close-menu {
     cursor: pointer;
     background: none;
