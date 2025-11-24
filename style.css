@@ -10,7 +10,7 @@ body {
     font-size: 50px;
     font-weight: 20%;
     position: flex;
-    top: 40%;
+    transform: translateY(30%)
 }
 body, html {
     overflow: auto;
@@ -52,7 +52,7 @@ img {
     height: 650px;
     position: fixed;
     top: 1%;
-    left: 3%;
+    left: 1%;
 }
 .myiglink {
     position: relative;
