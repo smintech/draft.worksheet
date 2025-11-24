@@ -11,8 +11,8 @@ body {
     font-weight: 20%;
 }
 .moveallelements{
-    z-index: 0;
-    transform: translateY(45%);
+    z-index: 1;
+    transform: translateY(40%);
 }
 body, html {
     overflow: auto;
