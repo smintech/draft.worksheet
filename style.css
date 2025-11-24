@@ -111,9 +111,10 @@ img {
     display: block;
 }
 .menu-list li a {
+  margin: 0;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 40px;
   color: #818181;
   display: block;
 }
