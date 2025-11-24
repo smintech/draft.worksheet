@@ -87,7 +87,7 @@ img {
   position: fixed;
   z-index: 10;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: #111;
   overflow-x: hidden;
   transition: transform 0.5s ease;
@@ -100,8 +100,8 @@ img {
 .overlay2 {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 30%;
+    rigt: 0;
+    width: 50%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     display: none;
@@ -117,6 +117,11 @@ img {
   font-size: 40px;
   color: #818181;
   display: block;
+}
+ul f {
+  list-style-type: disc;   /* disc, circle, square, none */
+  padding-left: 20px;      /* space between bullet and page edge */
+  margin-left: 0;          /* optional: remove extra margin */
 }
 #menu-toggle, #close-menu {
     cursor: pointer;
