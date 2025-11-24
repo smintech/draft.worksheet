@@ -9,9 +9,10 @@ body {
     color: white;
     font-size: 50px;
     font-weight: 20%;
-    position: flex;
+    position: relative;
 }
 h1 {
+    position: absolute;
     transform: translateY(50%);
 }
 body, html {
