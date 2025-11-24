@@ -11,6 +11,9 @@ body {
     font-weight: 20%;
     position: flex;
 }
+h1 {
+    transform: translateY(30%);
+}
 body, html {
     overflow: auto;
 }
