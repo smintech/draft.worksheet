@@ -81,6 +81,17 @@ img {
     text-decoration: none;
     text-align: center;
 }
+.open {
+    top: 83%;
+    left: 10%;
+    transform: translateY(50%);
+    font-size: 60px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    z-index: 15;
+}
 .sidebar {
   height: 100%;
   width: 40%;
@@ -122,17 +133,6 @@ img {
   list-style-type: disc;
   padding-left: 20px;
   margin-left: 0;
-}
-.open {
-    top: 83%;
-    left: 10%;
-    transform: translateY(50%);
-    font-size: 60px;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    z-index: 15;
 }
 #menu-toggle, #close-menu {
     cursor: pointer;
