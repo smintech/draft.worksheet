@@ -124,6 +124,7 @@ img {
   margin-left: 0;
 }
 #menu-toggle {
+    position: absolute;
     top: -5%;
     left: 61%;
 }
