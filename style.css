@@ -83,7 +83,7 @@ img {
 }
 .open {
     position: fixed;
-    top: -4%;
+    top: 4%;
     right: 10%;
     transform: translateY(-50%);
     font-size: 60px;
