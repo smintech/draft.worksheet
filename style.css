@@ -100,7 +100,7 @@ img {
 .overlay2 {
     position: absolute;
     top: 0;
-    rigt: 0;
+    right: 0;
     width: 40%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -125,8 +125,14 @@ img {
 }
 #menu-toggle {
     position: absolute;
-    top: -0%;
-    left: -0%;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px;
+    z-index: 15;
 }
 #menu-toggle, #close-menu {
     cursor: pointer;
