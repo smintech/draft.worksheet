@@ -12,7 +12,7 @@ body {
 }
 .moveallelements{
     z-index: 0;
-    transform: translateY(40%);
+    transform: translateY(38%);
 }
 body, html {
     overflow: auto;
@@ -48,6 +48,7 @@ input {
       color: black;
       font-weight: 20%;
       border-radius: 10px;
+      transform: translateY(-3%);
 }
 img {
     z-index: 1;
