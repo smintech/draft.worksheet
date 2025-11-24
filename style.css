@@ -126,7 +126,7 @@ img {
 .open {
     top: 83%;
     right: 10%;
-    transform: translate(0, 50%);
+    transform: translateY(50%);
     font-size: 60px;
     font-weight: bold;
     text-decoration: none;
