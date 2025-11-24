@@ -86,8 +86,8 @@ img {
   width: 250px;
   position: fixed;
   z-index: 10;
-  top: -5%;
-  left: 61%;
+  top: 0;
+  left: 0;
   background-color: #111;
   overflow-x: hidden;
   transition: transform 0.5s ease;
@@ -123,6 +123,8 @@ img {
     background: none;
     border: none;
     color: white;
+    top: -5%;
+    left: 61%;
     padding: 10px;
 }
 #close-menu {
