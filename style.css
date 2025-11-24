@@ -125,8 +125,8 @@ img {
 }
 #menu-toggle {
     position: absolute;
-    top: -5%;
-    left: 61%;
+    top: -0%;
+    left: -0%;
 }
 #menu-toggle, #close-menu {
     cursor: pointer;
