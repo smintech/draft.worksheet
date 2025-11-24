@@ -10,6 +10,7 @@ body {
     font-size: 50px;
     font-weight: 20%;
     position: flex;
+    top: 20%;
 }
 body, html {
     overflow: auto;
