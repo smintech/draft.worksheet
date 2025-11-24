@@ -124,7 +124,6 @@ img {
   margin-left: 0;
 }
 #menu-toggle {
-    position: fixed;
     top: -4%;
     right: 10%;
     cursor: pointer;
