@@ -124,11 +124,12 @@ img {
   margin-left: 0;
 }
 #menu-toggle {
-    top: -4%;
-    right: 10%;
-    cursor: pointer;
-    background: none;
-    border: none;
+    top: 83%;
+    left: 61%;
+    transform: translate(0, 50%);
+    font-size: 60px;
+    font-weight: bold;
+    text-decoration: none;
     color: white;
     padding: 10px;
     z-index: 15;
