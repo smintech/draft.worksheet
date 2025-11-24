@@ -118,10 +118,10 @@ img {
   color: #818181;
   display: block;
 }
-ul f {
-  list-style-type: disc;   /* disc, circle, square, none */
-  padding-left: 20px;      /* space between bullet and page edge */
-  margin-left: 0;          /* optional: remove extra margin */
+.menu-list, ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-left: 0;
 }
 #menu-toggle, #close-menu {
     cursor: pointer;
