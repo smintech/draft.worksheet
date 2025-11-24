@@ -98,7 +98,7 @@ img {
   transform: translateX(0);
 }
 .overlay2 {
-    position: fixed;
+    position: absolute;
     top: 0;
     rigt: 0;
     width: 40%;
