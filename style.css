@@ -49,7 +49,7 @@ input {
 img {
     width: 100%;
     height: 650px;
-    position: center;
+    position: fixed;
     top: 0px;
 }
 .myiglink {
