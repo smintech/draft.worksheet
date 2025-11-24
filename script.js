@@ -55,7 +55,7 @@ function getPrice(coinId) {
             return response.json();
         })
         .then(data => {
-                priceDiv.innerHTML ="";
+                priceDiv.innerHTML ="Price from CoinGecko:";
                 
                 coinId.forEach(coin => {
                     if (data[coin] && data[coin].usd) {
