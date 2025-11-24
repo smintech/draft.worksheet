@@ -101,13 +101,19 @@ document.addEventListener("DOMContentLoaded", function() {
     fetchWeather();
     });
 });
-const menuBtn = document.getElementById("menubtn");
-const menu = document.querySelector(".menu");
+const menuToggleBtn = document.getElementById("menu-toggle");
+const closeMenuBtn = document.getElementById("close-menu");
+const sidebarMenu = document.getElementById("sidebar-menu");
+const overlay = document.getElementById("overlay2");
 
-menubtn.addEventListener("click", () => {
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "block";
-  }
-});
+function openMenu() {
+  sidebarMenu.classList.add('is-open');
+  overlay.classList.add('is-visible');
+}
+function closeMenu() {
+  sidebarMenu.classList.remove('is-open');
+  overlay.classList.remove('is-visible');
+}
+menuToggleBtn.addEventListener('click', openMenu);
+closeMenuBtn.addEventListener('click', closeMenu);
+overlay.addEventListener('click', closeMenu);
