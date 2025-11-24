@@ -20,7 +20,7 @@ h2 {
     font-weight: 20%;
     height: 150px;
     margin: 0;
-    position: center;
+    position: flex;
 }
 .tittle2 {
     background-color: grey;
