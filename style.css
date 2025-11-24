@@ -51,6 +51,7 @@ img {
     height: 650px;
     position: fixed;
     top: 0px;
+    transform: translateX(50%)
 }
 .myiglink {
     position: relative;
