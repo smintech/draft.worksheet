@@ -82,8 +82,9 @@ img {
     text-align: center;
 }
 .open {
+    position: fixed;
     top: 83%;
-    left: 10%;
+    right: 10%;
     transform: translateY(50%);
     font-size: 60px;
     font-weight: bold;
