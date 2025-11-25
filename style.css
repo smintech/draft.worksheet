@@ -6,9 +6,9 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: grey;
-    font-size: 50%s;
-    font-weight: 45%;
+    color: #C0C0C0;
+    font-size: 3rem;
+    font-weight: 700;
 }
 .moveallelements{
     z-index: 0;
