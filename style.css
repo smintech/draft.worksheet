@@ -8,10 +8,10 @@ body {
     background-repeat: no-repeat;
     color: grey;
     font-size: 10%s;
-    font-weight: 30%;
 }
 .moveallelements{
     z-index: 0;
+    font-weight: 30%;
     transform: translateY(38%);
 }
 body, html {
