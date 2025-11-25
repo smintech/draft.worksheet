@@ -7,6 +7,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     color: grey;
+    font-size: 50%s;
+    font-weight: 45%;
 }
 .moveallelements{
     z-index: 0;
