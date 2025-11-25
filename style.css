@@ -12,7 +12,7 @@ body {
 }
 .moveallelements{
     z-index: 0;
-    transform: translateY(30%);
+    transform: translateY(38%);
 }
 body, html {
     overflow: auto;
@@ -27,7 +27,7 @@ h2 {
     margin: 0;
 }
 .tittle2 {
-    background-color: slate;
+    background-color: #2F4F4F;
 }
 bitcoin, weather {
     font-size: 30px;
