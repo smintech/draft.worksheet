@@ -6,19 +6,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #C0C0C0;
+    color: grey;
     font-size: 1.5rem;
     font-weight: 700;
 }
 .moveallelements{
     z-index: 0;
-    font-size: 50%s;
-    font-weight: 45%;
     transform: translateY(40%);
-}
-.moveallelements, p {
-    font-size: 20%s;
-    font-weight: 35%;
 }
 body, html {
     overflow: auto;
