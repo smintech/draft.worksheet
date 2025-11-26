@@ -1,4 +1,5 @@
 body {
+    position: relative;
     font-family: Arial, sans-serif;
     text-align: center;
     min-height: 100vh;
@@ -125,7 +126,7 @@ img {
     left: 10px;
 }
 footer {
-    top: 70%;
+    position: absolute;
     font-weight: bold;
     color: black;
 }
