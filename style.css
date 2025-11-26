@@ -125,6 +125,7 @@ img {
     left: 10px;
 }
 footer {
+    z-index: 1;
     font-weight: bold;
     color: black;
 }
