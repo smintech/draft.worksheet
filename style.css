@@ -11,6 +11,7 @@ body {
     font-weight: 700;
 }
 .moveallelements{
+    text-align: center;
     z-index: 0;
     transform: translateY(40%);
 }
