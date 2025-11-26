@@ -1,5 +1,6 @@
 body {
     display: flex;
+    flex-direction: colum;
     font-family: Arial, sans-serif;
     text-align: center;
     min-height: 100vh;
@@ -126,7 +127,6 @@ img {
     left: 10px;
 }
 footer {
-    z-index: 1;
     font-weight: bold;
     color: black;
 }
