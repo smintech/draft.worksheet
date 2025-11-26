@@ -79,3 +79,87 @@ Many work can be stored safe
    ┌──────┴─────────┐                               
    │ DAILY TRIVIA   │                                
    └────────────────┘                                
+
+            WEBSITE PRICE STAGES
+
+     ┌────────────────────────────────┐
+     │        1. BASIC WEBSITE        │
+     ├────────────────────────────────┤
+     │ • 1–3 pages                   │
+     │ • About / Contact / Home      │
+     │ • Simple design               │
+     │ • No backend                  │
+     │ • Price: ₦20k – ₦80k          │
+     └────────────────────────────────┘
+
+     ┌────────────────────────────────┐
+     │      2. STANDARD WEBSITE       │
+     ├────────────────────────────────┤
+     │ • 4–10 pages                  │
+     │ • Blog section                │
+     │ • Contact form                │
+     │ • Light animations            │
+     │ • Basic SEO                   │
+     │ • Price: ₦80k – ₦250k         │
+     └────────────────────────────────┘
+
+     ┌────────────────────────────────┐
+     │      3. BUSINESS WEBSITE       │
+     ├────────────────────────────────┤
+     │ • 10–20 pages                 │
+     │ • User accounts / Dashboard   │
+     │ • Database features           │
+     │ • Booking / Payment           │
+     │ • Strong SEO + security       │
+     │ • Price: ₦250k – ₦600k        │
+     └────────────────────────────────┘
+
+     ┌────────────────────────────────┐
+     │      4. E-COMMERCE WEBSITE     │
+     ├────────────────────────────────┤
+     │ • Full online store           │
+     │ • Cart + Checkout + Payment   │
+     │ • Product management system   │
+     │ • Admin dashboard             │
+     │ • Price: ₦400k – ₦1.2m        │
+     └────────────────────────────────┘
+
+     ┌────────────────────────────────┐
+     │     5. ADVANCED WEB APP        │
+     ├────────────────────────────────┤
+     │ • Social media, fintech app   │
+     │ • API integrations            │
+     │ • Real-time features          │
+     │ • Multi-user system           │
+     │ • High security               │
+     │ • Price: ₦1.2m – ₦10m+        │
+     └────────────────────────────────┘
+
+      ┌──────────────────────────┐
+       │     1. Choose Symbol     │
+       │  (✔ ✦ ★ ⚙ ♻ → ↑ ☀ ⚽ )    │
+       └───────────┬──────────────┘
+                   │
+                   ▼
+       ┌──────────────────────────┐
+       │ 2. Combine / Modify It   │
+       │  (Rotate, overlap, size) │
+       └───────────┬──────────────┘
+                   │
+                   ▼
+       ┌──────────────────────────┐
+       │ 3. Add Shape Support     │
+       │  (circle, square, ring)  │
+       └───────────┬──────────────┘
+                   │
+                   ▼
+       ┌──────────────────────────┐
+       │     4. Balance Layout    │
+       │ (center, spacing, weight)│
+       └───────────┬──────────────┘
+                   │
+                   ▼
+       ┌──────────────────────────┐
+       │     5. Final Icon        │
+       │   (clean + recognizable) │
+       └──────────────────────────┘
