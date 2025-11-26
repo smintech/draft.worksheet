@@ -1,9 +1,7 @@
 body {
-    display: flex;
-    flex-direction: colum;
     font-family: Arial, sans-serif;
     text-align: center;
-    min-height: 90vh;
+    min-height: 100vh;
     background-image: url("images/IMG_3686.jpeg");
     background-size: cover;
     background-position: center;
