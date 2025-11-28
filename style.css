@@ -129,7 +129,7 @@ footer {
     font-weight: 600;
     color: black;
 }
-.grid {
+.table-header {
   display: grid;
   grid-template-columns: 150px repeat(7, 1fr);
   gap: 5px;
