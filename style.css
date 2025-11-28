@@ -131,7 +131,7 @@ footer {
 }
 .table-header {
   display: grid;
-  grid-template-columns: 150px repeat(7, 1fr);
+  grid-template-columns: 150px;
   gap: 5px;
   text-align: center;
   font-weight: bold;
