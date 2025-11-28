@@ -129,3 +129,27 @@ footer {
     font-weight: 600;
     color: black;
 }
+.timetable-grid {
+  display: grid;
+  grid-template-columns: 150px repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+}
+
+.grid-header {
+  font-weight: bold;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+.grid-time {
+  font-weight: bold;
+  background-color: #eee;
+  padding: 10px;
+}
+
+.grid-subject {
+  background-color: #f9f9f9;
+  padding: 10px;
+}
