@@ -141,7 +141,7 @@ document.querySelectorAll(".columnheader").forEach(header => {
         }
         selectedColumn = this.dataset.column;
         previousHeader = this;
-        this.style.backgroundColor = "white";
+        this.style.backgroundColor = "grey";
 
         console.log("Selected column:", selectedColumn);
     });
