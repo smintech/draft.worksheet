@@ -143,24 +143,39 @@ document.querySelectorAll('.column-header').forEach(header => {
     });
 });
 document.getElementById('appllytoall').addEventListener('click', function() {
-    const centralInput = document.getElementById('autoInput');
+    const centralInput = document.getElementById('tablerowinput');
     const newValue = centralInput.value.trim();
     
     if (!newValue) {
         alert("Please enter a value first in the main input box.");
         return;
     }
-
     if (!selectedColumnClass) {
         alert("Please manually click a specific column header (Status Header or Notes Header) first.");
         return;
     }
 
-
 const targetInputs = document.querySelectorAll(selectedColumnClass);
-
+    const existingValues = new Set();
     targetInputs.forEach(input => {
         if (input.value.trim() !== '') {
             existingValues.add(input.value.trim().toLowerCase());
         }
+});
+    let appliedCount = 0;
+    if (existingValues.has(newValue.toLowerCase())) {
+        alert(`The value "${newValue}" already exists in the column. Cannot override values with a duplicate.`);
+        return;
+    }
+ targetInputs.forEach(input => {
+        if (input.value.trim().toLowerCase() !== newValue.toLowerCase()) {
+             input.value = newValue;
+             appliedCount++;
+        }
+    });
+    if (appliedCount > 0) {
+        alert(`Applied "${newValue}" and overrode ${appliedCount} existing cells in the selected column.`);
+    } else {
+        alert("All cells in the selected column already had that exact value.");
+    }
 });
