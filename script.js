@@ -125,8 +125,13 @@ const saveBtn = document.getElementById("savebtn");
 const resetBtn = document.getElementById("resetbtn");
 
 allrowInputBtn.addEventListener("click", () => {
+    if (!table) {
+        console.error("Timetable element not found!");
+        return;
+    }
     for (let i = 1; i < table.rows.length; i++) {
         for (let j = 0; j < table.rows[i].cells.length; j++) {
+            const cell = table.rows[i].cells[j];
             table.rows[i].cells[j].setAttribute("contenteditable", "true");
             table.rows[i].cells[j].style.backgroundColor = "#fffbe6";
         }
