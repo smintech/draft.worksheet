@@ -117,6 +117,7 @@ function closeMenu() {
 menuToggleBtn.addEventListener('click', openMenu);
 closeMenuBtn.addEventListener('click', closeMenu);
 overlay.addEventListener('click', closeMenu);
+});
 
 const allrowInputBtn = document.getElementById("allrowinputbtn");
 let editMode = false;
