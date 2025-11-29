@@ -152,7 +152,7 @@ h3 {
     font-size: 2.5rem;
     font-weight: 800;
 }
-::placeholder {
+.input::placeholder {
     border: 1px solid #333;
     padding: 15px;
     text-align: center;
