@@ -127,10 +127,10 @@ document.getElementById("allrowinputbtn").onclick = () => {
 
     cells.forEach(cell => {
         if (editMode) {
-            cell.contentEditable = true;
+            cell.contentEditable = "true";
             cell.classList.add("edit");
         } else {
-            cell.contentEditable = false;
+            cell.contentEditable = "false";
             cell.classList.remove("edit");
         }
     });
