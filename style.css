@@ -12,7 +12,9 @@ body {
 }
 .moveallelements{
     text-align: center;
-    z-index: 0;
+    position: relative;
+    pointer-events: auto;
+    z-index: auto;
     transform: translateY(30%);
 }
 body, html {
