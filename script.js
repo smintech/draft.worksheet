@@ -133,7 +133,7 @@ allrowInputBtn.addEventListener("click", () => {
         for (let j = 0; j < table.rows[i].cells.length; j++) {
             const cell = table.rows[i].cells[j];
             table.rows[i].cells[j].setAttribute("contenteditable", "true");
-            table.rows[i].cells[j].style.backgroundColor = "#fffbe6";
+            table.rows[i].cells[j].style.backgroundColor = "#FFD700";
         }
     }
     alert("All cells are now editable!");
