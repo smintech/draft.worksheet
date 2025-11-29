@@ -13,7 +13,7 @@ body {
 .moveallelements{
     text-align: center;
     z-index: 0;
-    transform: translateY(35%);
+    transform: translateY(30%);
 }
 body, html {
     overflow: auto;
@@ -135,8 +135,8 @@ footer {
     font-size: 2rem;
 }
 #timetable th {
-    background-color: #FFD700;
-    color: #FFDB58;
+    background-color: #FFDB58;
+    color: #FFD700;
     padding: 30px;
     font-size: 3rem;
     font-weight: 800;
@@ -145,5 +145,5 @@ footer {
     border: 1px solid #333;
     padding: 15px;
     text-align: center;
-    color: #FFDB58;
+    color: #FFD700;
 }
