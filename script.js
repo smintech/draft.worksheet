@@ -132,50 +132,34 @@ let editMode = false;
  });
 let selectedColumnClass = null;
 
-document.querySelectorAll('.columnheader').forEach(header => {
-    header.addEventListener('click', function() {
-        if (selectedColumnClass) {
-            document.querySelector(`.columheader[data-column-target="${selectedColumnClass}"]`).style.backgroundColor = '';
-        }
+document.querySelectorAll(".columnheader").forEach(header => {
+    header.addEventListener("click", () => {
+        selectedColumn = header.dataset.column;
+        console.log("Selected column:", selectedColumn);
+        alert(`Column selected: ${header.innerText}`);
+    });
+});
         selectedColumnClass = this.getAttribute('data-column-target');
         this.style.backgroundColor = 'black';
         console.log(`Column target set to: ${selectedColumnClass}`);
     });
 });
 document.getElementById('appllytoall').addEventListener('click', function() {
-    const centralInput = document.getElementById('tablerowinput');
-    const newValue = centralInput.value.trim();
-    
-    if (!newValue) {
-        alert("Please enter a value first in the main input box.");
+    if (!selectedColumn) {
+        alert("Select a column first.");
         return;
     }
-    if (!selectedColumnClass) {
-        alert("Please manually click a specific column header (Time/Days/Subjects) first.");
-        return;
-    }
+    const inputField = document.getElementById("tablerowinput");
+    const values = inputField.value.split(",").map(v => v.trim());
 
-const targetInputs = document.querySelectorAll(`.${selectedColumnClass}`);
-    const existingValues = new Set();
-    targetInputs.forEach(input => {
-        if (input.value.trim() !== '') {
-            existingValues.add(input.value.trim().toLowerCase());
-        }
-});
-    let appliedCount = 0;
-    if (existingValues.has(newValue.toLowerCase())) {
-        alert(`The value "${newValue}" already exists in the column. Cannot override values with a duplicate.`);
+    const targetInputs = document.querySelectorAll("." + selectedColumn);
+
+    if (values.length < targetInputs.length) {
+        alert("Not enough values for all rows!");
         return;
-    }
- targetInputs.forEach(input => {
-        if (input.value.trim().toLowerCase() !== newValue.toLowerCase()) {
-             input.value = newValue;
-             appliedCount++;
         }
+targetInputs.forEach((cell, i) => {
+        cell.value = values[i] || "";
     });
-    if (appliedCount > 0) {
-        alert(`Applied "${newValue}" and overrode ${appliedCount} existing cells in the selected column.`);
-    } else {
-        alert("All cells in the selected column already had that exact value.");
-    }
+    alert("Column updated successfully!");
 });
