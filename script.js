@@ -181,3 +181,19 @@ document.getElementById("savebtn").addEventListener("click", () => {
   localStorage.setItem("timetableData", JSON.stringify(data));
   alert("Timetable saved!");
 });
+document.getElementById("resetbtn").addEventListener("click", () => {
+  const saved = localStorage.getItem("timetableData");
+  if (saved) {
+    const data = JSON.parse(saved);
+    const rows = document.querySelectorAll("#timetable tbody tr");
+    rows.forEach((tr, i) => {
+      const rowData = data[i];
+      tr.querySelectorAll("input").forEach(input => {
+        input.value = rowData[input.className];
+      });
+    });
+    alert("Table restored to saved values!");
+  } else {
+    alert("No saved data found. Table remains as default.");
+  }
+});
