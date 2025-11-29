@@ -129,20 +129,8 @@ footer {
     font-weight: 600;
     color: black;
 }
-.time-table > .table-header {
-  text-align: center;
-  font-weight: bold;
-  background-color: #333;
-  color: white;
-  padding: 10px;
-}
-.grid-time {
-  font-weight: bold;
-  background-color: #eee;
-  padding: 10px;
-}
-
-.grid-subject {
-  background-color: #f9f9f9;
-  padding: 10px;
+#timetable th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
 }
