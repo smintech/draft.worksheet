@@ -138,7 +138,29 @@ document.querySelectorAll('.column-header').forEach(header => {
             document.querySelector(`[data-column-target="${selectedColumnClass}"]`).style.backgroundColor = '';
         }
         selectedColumnClass = this.getAttribute('data-column-target');
-        this.style.backgroundColor = '#ddd'; // Highlight the selected header
+        this.style.backgroundColor = 'black';
         console.log(`Column target set to: ${selectedColumnClass}`);
     });
+});
+document.getElementById('applyButton').addEventListener('click', function() {
+    const centralInput = document.getElementById('autoInput');
+    const newValue = centralInput.value.trim();
+    
+    if (!newValue) {
+        alert("Please enter a value first in the main input box.");
+        return;
+    }
+
+    if (!selectedColumnClass) {
+        alert("Please manually click a specific column header (Status Header or Notes Header) first.");
+        return;
+    }
+
+
+const targetInputs = document.querySelectorAll(selectedColumnClass);
+
+    targetInputs.forEach(input => {
+        if (input.value.trim() !== '') {
+            existingValues.add(input.value.trim().toLowerCase());
+        }
 });
