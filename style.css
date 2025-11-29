@@ -132,7 +132,7 @@ footer {
 #timetable {
     display: grid;
     grid-template-columns: 150px repeat(3, 1fr);
-    gap: 15px;
+    gap: 15em;
 }
 #timetable th {
     background-color: #333;
