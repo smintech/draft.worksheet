@@ -137,6 +137,12 @@ allrowInputBtn.addEventListener("click", () => {
         }
     }
     alert("All cells are now editable!");
+    
+});
+window.addEventListener("load", () => {
+    for (let td of document.querySelectorAll(".editable td")) {
+        td.addEventListener("click", () => editable.edit(td));
+    }
 });
 
 saveBtn.addEventListener("click", () => {
