@@ -11,6 +11,7 @@ body {
     font-weight: 700;
 }
 .moveallelements{
+    position: fixed;
     text-align: center;
     z-index: 0;
     transform: translateY(40%);
@@ -132,11 +133,14 @@ footer {
 #timetable {
     width: 100%;
     border-collapse: collapse;
+    font-size: 1rem;
 }
 #timetable th {
     background-color: #333;
     color: #fff;
-    padding: 15px;
+    padding: 30px;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 #timetable th, #timetable td {
     border: 1px solid #333;
