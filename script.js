@@ -118,20 +118,15 @@ menuToggleBtn.addEventListener('click', openMenu);
 closeMenuBtn.addEventListener('click', closeMenu);
 overlay.addEventListener('click', closeMenu);
 
+const allrowInputBtn = document.getElementById("allrowinputbtn");
 let editMode = false;
-
-document.getElementById("allrowinputbtn").onclick = () => {
+  allrowInputBtn.addEventListener("click", () => {
     editMode = !editMode;
-
-    const cells = document.querySelectorAll(".editable td");
-
+    const cells = document.querySelectorAll("#timetable tbody tr.editable td");
     cells.forEach(cell => {
-        if (editMode) {
-            cell.contentEditable = "true";
-            cell.classList.add("edit");
-        } else {
-            cell.contentEditable = "false";
-            cell.classList.remove("edit");
-        }
+      cell.contentEditable = editMode ? "true" : "false";
+      if (editMode) cell.classList.add("edit");
+      else cell.classList.remove("edit");
     });
-};
+    allrowInputBtn.innerText = editMode ? "Stop Editing" : "Edit All Rows";
+ });
