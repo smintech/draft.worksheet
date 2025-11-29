@@ -132,10 +132,10 @@ let editMode = false;
  });
 let selectedColumnClass = null;
 
-document.querySelectorAll('.column-header').forEach(header => {
+document.querySelectorAll('.columnheader').forEach(header => {
     header.addEventListener('click', function() {
         if (selectedColumnClass) {
-            document.querySelector(`[data-column-target="${selectedColumnClass}"]`).style.backgroundColor = '';
+            document.querySelector(`.columheader[data-column-target="${selectedColumnClass}"]`).style.backgroundColor = '';
         }
         selectedColumnClass = this.getAttribute('data-column-target');
         this.style.backgroundColor = 'black';
