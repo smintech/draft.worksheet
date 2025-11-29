@@ -151,7 +151,7 @@ document.getElementById('appllytoall').addEventListener('click', function() {
         return;
     }
     if (!selectedColumnClass) {
-        alert("Please manually click a specific column header (Status Header or Notes Header) first.");
+        alert("Please manually click a specific column header (Time/Days/Subjects) first.");
         return;
     }
 
