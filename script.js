@@ -169,3 +169,15 @@ document.getElementById("appllytoall").addEventListener("click", function () {
 
     alert("Column updated successfully!");
 });
+document.getElementById("savebtn").addEventListener("click", () => {
+  const data = [];
+  document.querySelectorAll("#timetable tbody tr").forEach(tr => {
+    const row = {};
+    tr.querySelectorAll("input").forEach(input => {
+      row[input.className] = input.value;
+    });
+    data.push(row);
+  });
+  localStorage.setItem("timetableData", JSON.stringify(data));
+  alert("Timetable saved!");
+});
