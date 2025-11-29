@@ -142,7 +142,7 @@ document.querySelectorAll('.column-header').forEach(header => {
         console.log(`Column target set to: ${selectedColumnClass}`);
     });
 });
-document.getElementById('applyButton').addEventListener('click', function() {
+document.getElementById('appllytoall').addEventListener('click', function() {
     const centralInput = document.getElementById('autoInput');
     const newValue = centralInput.value.trim();
     
