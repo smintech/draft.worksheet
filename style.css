@@ -139,3 +139,8 @@ footer {
     color: #fff;
     padding: 10px;
 }
+#timetable th, #timetable td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
