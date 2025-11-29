@@ -124,7 +124,7 @@ const allcolumInputBtn = document.getElementById("allcoluminputbtn");
 const saveBtn = document.getElementById("savebtn");
 const resetBtn = document.getElementById("resetbtn");
 
-selectColum.addEventListener("click", () => {
+allcolumInputBtn.addEventListener("click", () => {
     for (let i = 1; i < table.rows.length; i++) {
         for (let j = 0; j < table.rows[i].cells.length; j++) {
             table.rows[i].cells[j].setAttribute("contenteditable", "true");
