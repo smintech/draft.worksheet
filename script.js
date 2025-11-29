@@ -119,7 +119,7 @@ closeMenuBtn.addEventListener('click', closeMenu);
 overlay.addEventListener('click', closeMenu);
 
 const table = document.getElementById("timetable");
-const  selectColum = document.getElementById("selectedcolumllbtn");
+const  selectColum = document.getElementById("selectedcolumbtn");
 const allrowInputBtn = document.getElementById("allrowinputbtn");
 const saveBtn = document.getElementById("savebtn");
 const resetBtn = document.getElementById("resetbtn");
