@@ -120,7 +120,7 @@ overlay.addEventListener('click', closeMenu);
 
 let editMode = false;
 
-document.getElementById("editinputbtn").onclick = () => {
+document.getElementById("allrowinputbtn").onclick = () => {
     editMode = !editMode;
 
     const cells = document.querySelectorAll(".editable td");
