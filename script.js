@@ -155,7 +155,7 @@ document.getElementById('appllytoall').addEventListener('click', function() {
         return;
     }
 
-const targetInputs = document.querySelectorAll(selectedColumnClass);
+const targetInputs = document.querySelectorAll("." + selectedColumnClass);
     const existingValues = new Set();
     targetInputs.forEach(input => {
         if (input.value.trim() !== '') {
