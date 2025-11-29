@@ -142,28 +142,3 @@ document.querySelectorAll('.column-header').forEach(header => {
         console.log(`Column target set to: ${selectedColumnClass}`);
     });
 });
-document.getElementById('applyButton').addEventListener('click', function() {
-    const centralInput = document.getElementById('autoInput');
-    const newValue = centralInput.value.trim();
-
-    if (!newValue) {
-        alert("Please enter a value first in the main input box.");
-        return;
-    }
-
-    if (!selectedColumnClass) {
-        alert("Please manually click a specific column header (Status Header or Notes Header) first.");
-        return;
-    }
-
-    // Target all inputs in the selected column
-    const targetInputs = document.querySelectorAll(selectedColumnClass);
-
-    // --- Start uniqueness check logic (from previous responses) ---
-    const existingValues = new Set();
-    targetInputs.forEach(input => {
-        if (input.value.trim() !== '') {
-            existingValues.add(input.value.trim().toLowerCase());
-        }
-    });
-    // --- End uniqueness check logic
