@@ -118,61 +118,20 @@ menuToggleBtn.addEventListener('click', openMenu);
 closeMenuBtn.addEventListener('click', closeMenu);
 overlay.addEventListener('click', closeMenu);
 
-const table = document.getElementById("timetable");
-const  selectColum = document.getElementById("selectedcolumbtn");
-const allrowInputBtn = document.getElementById("allrowinputbtn");
-const saveBtn = document.getElementById("savebtn");
-const resetBtn = document.getElementById("resetbtn");
+let editMode = false;
 
-allrowInputBtn.addEventListener("click", () => {
-    if (!table) {
-        console.error("Timetable element not found!");
-        return;
-    }
-    for (let i = 1; i < table.rows.length; i++) {
-        for (let j = 0; j < table.rows[i].cells.length; j++) {
-            const cell = table.rows[i].cells[j];
-            table.rows[i].cells[j].setAttribute("contenteditable", "true");
-            table.rows[i].cells[j].style.backgroundColor = "#FFD700";
+document.getElementById("editinputbtn").onclick = () => {
+    editMode = !editMode;
+
+    const cells = document.querySelectorAll(".editable td");
+
+    cells.forEach(cell => {
+        if (editMode) {
+            cell.contentEditable = true;
+            cell.classList.add("edit");
+        } else {
+            cell.contentEditable = false;
+            cell.classList.remove("edit");
         }
-    }
-    alert("All cells are now editable!");
-    
-});
-window.addEventListener("load", () => {
-    for (let td of document.querySelectorAll(".editable td")) {
-        td.addEventListener("click", () => editable.edit(td));
-    }
-});
-
-saveBtn.addEventListener("click", () => {
-    const data = [];
-    for (let i = 0; i < table.rows.length; i++) {
-        const rowData = [];
-        for (let cell of table.rows[i].cells) {
-            rowData.push(cell.innerText);
-        }
-        data.push(rowData);
-    }
-    localStorage.setItem("timetableData", JSON.stringify(data));
-    alert("All changes saved!");
-});
-
-window.addEventListener("DOMContentLoaded", () => {
-    const saved = localStorage.getItem("timetableData");
-    if (saved) {
-        const data = JSON.parse(saved);
-        for (let i = 0; i < data.length; i++) {
-            for (let j = 0; j < data[i].length; j++) {
-                if (table.rows[i] && table.rows[i].cells[j]) {
-                    table.rows[i].cells[j].innerText = data[i][j];
-                }
-            }
-        }
-    }
-});
-
-resetBtn.addEventListener("click", () => {
-    localStorage.removeItem("timetableData");
-    location.reload();
-});
+    });
+};
