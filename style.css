@@ -136,7 +136,7 @@ footer {
 }
 #timetable th {
     background-color: #FFD700;
-    color: #5C4033;
+    color: black;
     padding: 30px;
     font-size: 3rem;
     font-weight: 800;
@@ -145,5 +145,5 @@ footer {
     border: 1px solid #333;
     padding: 15px;
     text-align: center;
-    color: #5C4033;
+    color: black;
 }
