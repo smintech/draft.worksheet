@@ -132,8 +132,6 @@ footer {
 #timetable {
     width: 100%;
     border-collapse: collapse;
-    grid-template-columns: 150px repeat(3, 1fr);
-    gap: 15em;
 }
 #timetable th {
     background-color: #333;
