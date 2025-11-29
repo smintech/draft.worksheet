@@ -129,10 +129,7 @@ footer {
     font-weight: 600;
     color: black;
 }
-.table-header {
-  display: grid;
-  grid-template-columns: 150px;
-  gap: 5px;
+.time-table > .table-header {
   text-align: center;
   font-weight: bold;
   background-color: #333;
