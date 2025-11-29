@@ -131,17 +131,21 @@ let editMode = false;
     allrowInputBtn.innerText = editMode ? "Stop Editing" : "Edit All Rows";
  });
 let selectedColumn = null;
+let previousHeader = null;
 
 document.querySelectorAll(".columnheader").forEach(header => {
     header.addEventListener("click", function () {
 
+        if (previousHeader) {
+            previousHeader.style.backgroundColor = "";
+        }
         selectedColumn = this.dataset.column;
-        console.log("Selected column:", selectedColumn);
+        previousHeader = this;
+        this.style.backgroundColor = "white";
 
-        alert(`Column selected: ${this.innerText}`);
+        console.log("Selected column:", selectedColumn);
     });
 });
-
 document.getElementById("appllytoall").addEventListener("click", function () {
 
     if (!selectedColumn) {
