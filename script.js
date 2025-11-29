@@ -130,25 +130,25 @@ let editMode = false;
     });
     allrowInputBtn.innerText = editMode ? "Stop Editing" : "Edit All Rows";
  });
-let selectedColumnClass = null;
+let selectedColumn = null;
 
 document.querySelectorAll(".columnheader").forEach(header => {
-    header.addEventListener("click", () => {
-        selectedColumn = header.dataset.column;
+    header.addEventListener("click", function () {
+
+        selectedColumn = this.dataset.column;
         console.log("Selected column:", selectedColumn);
-        alert(`Column selected: ${header.innerText}`);
+
+        alert(`Column selected: ${this.innerText}`);
     });
 });
-        selectedColumnClass = this.getAttribute('data-column-target');
-        this.style.backgroundColor = 'black';
-        console.log(`Column target set to: ${selectedColumnClass}`);
-    });
-});
-document.getElementById('appllytoall').addEventListener('click', function() {
+
+document.getElementById("appllytoall").addEventListener("click", function () {
+
     if (!selectedColumn) {
         alert("Select a column first.");
         return;
     }
+
     const inputField = document.getElementById("tablerowinput");
     const values = inputField.value.split(",").map(v => v.trim());
 
@@ -157,9 +157,11 @@ document.getElementById('appllytoall').addEventListener('click', function() {
     if (values.length < targetInputs.length) {
         alert("Not enough values for all rows!");
         return;
-        }
-targetInputs.forEach((cell, i) => {
-        cell.value = values[i] || "";
+    }
+
+    targetInputs.forEach((input, i) => {
+        input.value = values[i] || "";
     });
+
     alert("Column updated successfully!");
 });
