@@ -117,23 +117,23 @@ function closeMenu() {
 menuToggleBtn.addEventListener('click', openMenu);
 closeMenuBtn.addEventListener('click', closeMenu);
 overlay.addEventListener('click', closeMenu);
+
 const table = document.getElementById("timetable");
-const editAllBtn = document.getElementById("editAllBtn");
+const  selectColum = document.getElementById("selectedcolumllbtn");
+const allcolumInputBtn = document.getElementById("allcoluminputbtn");
 const saveBtn = document.getElementById("savebtn");
 const resetBtn = document.getElementById("resetbtn");
 
-// Enable editing for all cells (except header) with one click
-editAllBtn.addEventListener("click", () => {
-    for (let i = 1; i < table.rows.length; i++) { // skip header row
+selectColum.addEventListener("click", () => {
+    for (let i = 1; i < table.rows.length; i++) {
         for (let j = 0; j < table.rows[i].cells.length; j++) {
             table.rows[i].cells[j].setAttribute("contenteditable", "true");
-            table.rows[i].cells[j].style.backgroundColor = "#fffbe6"; // highlight editable
+            table.rows[i].cells[j].style.backgroundColor = "#fffbe6";
         }
     }
     alert("All cells are now editable!");
 });
 
-// Save table to localStorage
 saveBtn.addEventListener("click", () => {
     const data = [];
     for (let i = 0; i < table.rows.length; i++) {
@@ -147,7 +147,6 @@ saveBtn.addEventListener("click", () => {
     alert("All changes saved!");
 });
 
-// Load saved table if exists
 window.addEventListener("DOMContentLoaded", () => {
     const saved = localStorage.getItem("timetableData");
     if (saved) {
@@ -162,7 +161,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Reset table
 resetBtn.addEventListener("click", () => {
     localStorage.removeItem("timetableData");
     location.reload();
