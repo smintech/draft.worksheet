@@ -120,11 +120,11 @@ overlay.addEventListener('click', closeMenu);
 
 const table = document.getElementById("timetable");
 const  selectColum = document.getElementById("selectedcolumllbtn");
-const allcolumInputBtn = document.getElementById("allcoluminputbtn");
+const allrowInputBtn = document.getElementById("allrowinputbtn");
 const saveBtn = document.getElementById("savebtn");
 const resetBtn = document.getElementById("resetbtn");
 
-allcolumInputBtn.addEventListener("click", () => {
+allrowInputBtn.addEventListener("click", () => {
     for (let i = 1; i < table.rows.length; i++) {
         for (let j = 0; j < table.rows[i].cells.length; j++) {
             table.rows[i].cells[j].setAttribute("contenteditable", "true");
