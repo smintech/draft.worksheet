@@ -129,6 +129,15 @@ footer {
     font-weight: 600;
     color: black;
 }
+h3 {
+    display: block;
+    color: black ;
+    background-color: #FFD700;
+    font-size: 100px;
+    font-weight: 20%;
+    height: 150px;
+    margin: 0;
+}
 #timetable {
     width: 100%;
     border-collapse: collapse;
