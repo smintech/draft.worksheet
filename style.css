@@ -15,6 +15,7 @@ body {
     position: relative;
     pointer-events: auto;
     z-index: auto;
+    pointer-events: auto;
     transform: translateY(30%);
 }
 body, html {
