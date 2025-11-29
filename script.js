@@ -117,3 +117,53 @@ function closeMenu() {
 menuToggleBtn.addEventListener('click', openMenu);
 closeMenuBtn.addEventListener('click', closeMenu);
 overlay.addEventListener('click', closeMenu);
+const table = document.getElementById("timetable");
+const editAllBtn = document.getElementById("editAllBtn");
+const saveBtn = document.getElementById("savebtn");
+const resetBtn = document.getElementById("resetbtn");
+
+// Enable editing for all cells (except header) with one click
+editAllBtn.addEventListener("click", () => {
+    for (let i = 1; i < table.rows.length; i++) { // skip header row
+        for (let j = 0; j < table.rows[i].cells.length; j++) {
+            table.rows[i].cells[j].setAttribute("contenteditable", "true");
+            table.rows[i].cells[j].style.backgroundColor = "#fffbe6"; // highlight editable
+        }
+    }
+    alert("All cells are now editable!");
+});
+
+// Save table to localStorage
+saveBtn.addEventListener("click", () => {
+    const data = [];
+    for (let i = 0; i < table.rows.length; i++) {
+        const rowData = [];
+        for (let cell of table.rows[i].cells) {
+            rowData.push(cell.innerText);
+        }
+        data.push(rowData);
+    }
+    localStorage.setItem("timetableData", JSON.stringify(data));
+    alert("All changes saved!");
+});
+
+// Load saved table if exists
+window.addEventListener("DOMContentLoaded", () => {
+    const saved = localStorage.getItem("timetableData");
+    if (saved) {
+        const data = JSON.parse(saved);
+        for (let i = 0; i < data.length; i++) {
+            for (let j = 0; j < data[i].length; j++) {
+                if (table.rows[i] && table.rows[i].cells[j]) {
+                    table.rows[i].cells[j].innerText = data[i][j];
+                }
+            }
+        }
+    }
+});
+
+// Reset table
+resetBtn.addEventListener("click", () => {
+    localStorage.removeItem("timetableData");
+    location.reload();
+});
