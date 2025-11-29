@@ -130,7 +130,8 @@ footer {
     color: black;
 }
 #timetable {
-    display: grid;
+    width: 100%;
+    border-collapse: collapse;
     grid-template-columns: 150px repeat(3, 1fr);
     gap: 15em;
 }
