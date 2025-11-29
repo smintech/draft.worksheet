@@ -149,7 +149,7 @@ h3 {
     background-color: #FFD700;
     color: black;
     padding: 30px;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
 }
 .input {
@@ -157,5 +157,5 @@ h3 {
     padding: 15px;
     text-align: center;
     color: black;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
