@@ -129,6 +129,9 @@ footer {
     font-weight: 600;
     color: black;
 }
+#timetable {
+    display: grid;
+}
 #timetable th {
     background-color: #333;
     color: #fff;
