@@ -173,21 +173,18 @@ const table = document.getElementById('timetable');
 const saveBtn = document.getElementById("savebtn");
 const resetBtn = document.getElementById("resetbtn");
 saveBtn.addEventListener("click", () => {
-    document.querySelectorAll("#timetable input").forEach(input => {
-        input.setAttribute("value", input.value);
+    const inputs = document.querySelectorAll("#timetable input");
+    const hasValue = Array.from(inputs).some(input => {
+        const val = input.value.trim();
+        return val !== "" && val !== "Add" && val !== "BREAK";
     });
 
-    localStorage.setItem('savedTableHTML', table.innerHTML);
-    console.log('Saved table HTML to localStorage.');
-    alert('Saved successfully!');
-  };
-resetBtn.onclick = () => {
-    const values = localStorage.getItem("savedTableHTML");
-    if (!values) {
-        alert("No saved timetable yet.");
+    if (!hasValue) {
+        alert("Cannot save an empty or default table.");
         return;
     }
-    table.innerHTML = values;
+    inputs.forEach(input => input.setAttribute("value", input.value));
 
-    alert("Restored successfully!");
-};
+    localStorage.setItem('savedTableHTML', table.innerHTML);
+    alert('Saved successfully!');
+})
