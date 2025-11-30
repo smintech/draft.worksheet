@@ -169,6 +169,8 @@ document.getElementById("appllytoall").addEventListener("click", function () {
 
     alert("Column updated successfully!");
 });
+const saveBtn = document.getElementById("savebtn");
+const resetBtn = document.getElementById("resetbtn");
 saveBtn.onclick = () => {
     document.querySelectorAll("#timetable input").forEach(input => {
         input.setAttribute("value", input.value);
