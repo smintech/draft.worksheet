@@ -169,21 +169,23 @@ document.getElementById("appllytoall").addEventListener("click", function () {
 
     alert("Column updated successfully!");
 });
-document.getElementById("savebtn").addEventListener("click", function () {
-    const table = document.getElementById("timetable");
-    localStorage.setItem("savedTable", table.innerHTML);
+saveBtn.onclick = () => {
+    document.querySelectorAll("#timetable input").forEach(input => {
+        input.setAttribute("value", input.value);
+    });
+    localStorage.setItem("savedTableHTML", table.innerHTML);
 
-    alert("Table saved successfully!");
-});
-document.getElementById("resetbtn").addEventListener("click", function () {
-    const saved = localStorage.getItem("savedTable");
-
+    alert("Saved successfully!");
+};
+resetBtn.onclick = () => {
+    const saved = localStorage.getItem("savedTableHTML");
     if (!saved) {
-        alert("No saved version found!");
+        alert("No saved timetable yet.");
         return;
     }
+    table.innerHTML = saved;
 
-    document.getElementById("timetable").innerHTML = saved;
+    attachColumnSelector();
 
-    alert("Table restored to last saved version!");
-});
+    alert("Restored successfully!");
+};
