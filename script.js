@@ -172,9 +172,10 @@ document.getElementById("appllytoall").addEventListener("click", function () {
 const table = document.getElementById('timetable');
 const saveBtn = document.getElementById("savebtn");
 const resetBtn = document.getElementById("resetbtn");
-savebtn.addEventListener("click", () => {
-    const inputs = document.querySelectorAll("#timetable input");
-    const values = [];
+saveBtn.addEventListener("click", () => {
+    document.querySelectorAll("#timetable input").forEach(input => {
+        input.setAttribute("value", input.value);
+    });
 
     inputs.forEach(input => values.push(input.value));
 
