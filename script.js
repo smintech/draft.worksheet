@@ -93,11 +93,11 @@ function fetchWeather() {
 }
 document.addEventListener("DOMContentLoaded", function() {
     const coinprices = ['bitcoin','the-open-network'];
-    getPrice(coinprices);
+    getPrice();
     fetchWeather();
     
     refreshDatabtn.addEventListener("click", () => {
-    getPrice(coinprices);
+    getPrice();
     fetchWeather();
     });
 });
