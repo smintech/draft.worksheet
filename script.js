@@ -92,12 +92,12 @@ function fetchWeather() {
             });
 }
 document.addEventListener("DOMContentLoaded", function() {
-    const coinprices = ['bitcoin','the-open-network'];
-    getPrice();
+    const coinprices = [];
+    getPrice(coinprices);
     fetchWeather();
     
     refreshDatabtn.addEventListener("click", () => {
-    getPrice();
+    getPrice(coinprices);
     fetchWeather();
     });
 });
