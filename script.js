@@ -185,7 +185,5 @@ resetBtn.onclick = () => {
     }
     table.innerHTML = saved;
 
-    attachColumnSelector();
-
     alert("Restored successfully!");
 };
