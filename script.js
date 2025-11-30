@@ -177,8 +177,6 @@ saveBtn.addEventListener("click", () => {
         input.setAttribute("value", input.value);
     });
 
-    inputs.forEach(input => values.push(input.value));
-
     localStorage.setItem('savedTableHTML', table.innerHTML);
     console.log('Saved table HTML to localStorage.');
     alert('Saved successfully!');
