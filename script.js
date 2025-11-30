@@ -169,6 +169,7 @@ document.getElementById("appllytoall").addEventListener("click", function () {
 
     alert("Column updated successfully!");
 });
+const table = document.getElementById('timetable');
 const saveBtn = document.getElementById("savebtn");
 const resetBtn = document.getElementById("resetbtn");
 saveBtn.onclick = () => {
