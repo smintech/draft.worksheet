@@ -172,13 +172,15 @@ document.getElementById("appllytoall").addEventListener("click", function () {
 const saveBtn = document.getElementById("savebtn");
 const resetBtn = document.getElementById("resetbtn");
 saveBtn.onclick = () => {
-    document.querySelectorAll("#timetable input").forEach(input => {
-        input.setAttribute("value", input.value);
+    if (!table) { console.error('No table element found'); return; }
+    
+    document.querySelectorAll('#timetable input').forEach(input => {
+      input.setAttribute('value', input.value);
     });
-    localStorage.setItem("savedTableHTML", table.innerHTML);
-
-    alert("Saved successfully!");
-};
+    localStorage.setItem('savedTableHTML', table.innerHTML);
+    console.log('Saved table HTML to localStorage.');
+    alert('Saved successfully!');
+  };
 resetBtn.onclick = () => {
     const saved = localStorage.getItem("savedTableHTML");
     if (!saved) {
