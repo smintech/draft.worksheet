@@ -172,23 +172,23 @@ document.getElementById("appllytoall").addEventListener("click", function () {
 const table = document.getElementById('timetable');
 const saveBtn = document.getElementById("savebtn");
 const resetBtn = document.getElementById("resetbtn");
-saveBtn.onclick = () => {
-    if (!table) { console.error('No table element found'); return; }
-    
-    document.querySelectorAll('#timetable input').forEach(input => {
-      input.setAttribute('value', input.value);
-    });
+savebtn.addEventListener("click", () => {
+    const inputs = document.querySelectorAll("#timetable input");
+    const values = [];
+
+    inputs.forEach(input => values.push(input.value));
+
     localStorage.setItem('savedTableHTML', table.innerHTML);
     console.log('Saved table HTML to localStorage.');
     alert('Saved successfully!');
   };
 resetBtn.onclick = () => {
-    const saved = localStorage.getItem("savedTableHTML");
-    if (!saved) {
+    const values = localStorage.getItem("savedTableHTML");
+    if (!values) {
         alert("No saved timetable yet.");
         return;
     }
-    table.innerHTML = saved;
+    table.innerHTML = values;
 
     alert("Restored successfully!");
 };
