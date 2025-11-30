@@ -188,3 +188,12 @@ saveBtn.addEventListener("click", () => {
     localStorage.setItem('savedTableHTML', table.innerHTML);
     alert('Saved successfully!');
 })
+resetBtn.addEventListener("click", () => {
+    const saved = localStorage.getItem("savedTableHTML");
+    if (!saved) {
+        alert("No saved timetable yet.");
+        return;
+    }
+    table.innerHTML = saved;
+    alert("Restored successfully!");
+})
