@@ -199,21 +199,21 @@ resetBtn.addEventListener("click", () => {
 })
 const file = document.getElementById('image');
 const space = document.getElementById('filespace');
-     file.addEventListener("change", () {
+     file.addEventListener("change", () => {
     space.innerHTML = "";
-    const file = file.files[0];
-            if (!file) return;
+    const input = file.files[0];
+            if (!input) return;
 
         const url = URL.createObjectURL(file);
 
-        if (file.type.startsWith('image/')) {
+        if (input.type.startsWith('image/')) {
         
         const img = document.createElement('img');
         img.src = url;
         img.style.maxWidth = "400px";
         img.style.maxHeight = "300px";
         space.appendChild(img);
-    } else if (file.type.startsWith('video/')) {
+    } else if (input.type.startsWith('video/')) {
         const video = document.createElement('video');
         video.src = url;
         video.controls = true;
