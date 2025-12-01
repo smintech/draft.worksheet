@@ -211,7 +211,7 @@ const placeholderText = document.getElementById('placeholdertext');
                     previewImg.style.display = 'none';
                     previewVid.style.display = 'none';
                     placeholderText.style.display = 'none';
-                    
+                    }
                     if (file.type.startsWith('image/')) {
                         
                         previewImg.src = e.target.result;
@@ -225,7 +225,7 @@ const placeholderText = document.getElementById('placeholdertext');
 
                 reader.readAsDataURL(file);
 
-            } else {
+            } else 
                 previewImg.style.display = 'none';
                 previewVid.style.display = 'none';
                 placeholderText.textContent = 'Preview area. Select a file above.';
