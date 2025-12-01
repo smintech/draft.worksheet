@@ -197,4 +197,22 @@ resetBtn.addEventListener("click", () => {
     table.innerHTML = saved;
     alert("Restored successfully!");
 })
-const file = document.getElementById('timetable');
+const file = document.getElementById('image');
+const previewImg = document.getElementById('previewimg');
+const previewVid = document.getElementById('previewvid');
+     file.addEventListener("change", () => {
+    const file = this.files[0];
+            if (!file) return;
+
+            const url = URL.createObjectURL(file);
+
+            if (file.type.startsWith('image/')) {
+                previewImg.src = url;
+                previewImg.style.display = 'block';
+                previewVid.style.display = 'none';
+            } else if (file.type.startsWith('video/')) {
+                previewVid.src = url;
+                previewVid.style.display = 'block';
+                previewImg.style.display = 'none';
+            }
+    });
