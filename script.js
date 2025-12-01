@@ -197,8 +197,9 @@ resetBtn.addEventListener("click", () => {
     table.innerHTML = saved;
     alert("Restored successfully!");
 })
-const file = document.getElementById('image');
 const space = document.getElementById('filespace');
+const img = document.getElementById('previewimg');
+const video = document.getElementById('previewvid');
      file.addEventListener("change", () => {
     space.innerHTML = "";
     const input = file.files[0];
