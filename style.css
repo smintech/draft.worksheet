@@ -160,6 +160,7 @@ h3 {
     font-size: 1rem;
 }
 .filespace {
+    display: flex;
     transform: translateY(50%);
 }
 #fileinput { 
