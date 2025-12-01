@@ -197,3 +197,4 @@ resetBtn.addEventListener("click", () => {
     table.innerHTML = saved;
     alert("Restored successfully!");
 })
+const file = document.getElementById('timetable');
