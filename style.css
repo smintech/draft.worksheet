@@ -160,13 +160,13 @@ h3 {
     font-size: 1rem;
 }
 .filespace {
-    display: block;
     transform: translateY(50%);
 }
 #fileinput { 
    height: 6rem;
 }
 #previewimg,#previewvid {
+   display: flex;
    height: auto;
    width: auto;
 }
