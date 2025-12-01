@@ -198,21 +198,27 @@ resetBtn.addEventListener("click", () => {
     alert("Restored successfully!");
 })
 const file = document.getElementById('image');
-const previewImg = document.getElementById('previewimg');
-const previewVid = document.getElementById('previewvid');
-     file.addEventListener("change", () => {
-    const file = this.files[0];
+const space = document.getElementById('filespace');
+     file.addEventListener("change", () {
+    space.innerHTML = "";
+    const file = file.files[0];
             if (!file) return;
 
-            const url = URL.createObjectURL(file);
+        const url = URL.createObjectURL(file);
 
-            if (file.type.startsWith('image/')) {
-                previewImg.src = url;
-                previewImg.style.display = 'block';
-                previewVid.style.display = 'none';
-            } else if (file.type.startsWith('video/')) {
-                previewVid.src = url;
-                previewVid.style.display = 'block';
-                previewImg.style.display = 'none';
-            }
-    });
+        if (file.type.startsWith('image/')) {
+        
+        const img = document.createElement('img');
+        img.src = url;
+        img.style.maxWidth = "400px";
+        img.style.maxHeight = "300px";
+        space.appendChild(img);
+    } else if (file.type.startsWith('video/')) {
+        const video = document.createElement('video');
+        video.src = url;
+        video.controls = true;
+        video.style.maxWidth = "400px";
+        video.style.maxHeight = "300px";
+        space.appendChild(video);
+    }
+});
