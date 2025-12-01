@@ -232,4 +232,4 @@ const placeholderText = document.getElementById('placeholdertext');
                 placeholderText.textContent = 'Preview area. Select a file above.';
                 placeholderText.style.display = 'block';
             }
-        });
+});
