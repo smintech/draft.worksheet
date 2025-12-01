@@ -199,7 +199,7 @@ resetBtn.addEventListener("click", () => {
 })
 
 
-const fileInput = document.getElementById('file-input');
+const fileInput = document.getElementById('fileinput');
 const previewImg = document.getElementById('previewimg');
 const previewVid = document.getElementById('previewvid');
 const placeholderText = document.getElementById('placeholdertext');
@@ -222,7 +222,7 @@ const placeholderText = document.getElementById('placeholdertext');
                         previewVid.src = e.target.result;
                         previewVid.style.display = 'block';
                         previewVid.load();
-                    }
+                    };
 
                 reader.readAsDataURL(file);
 
