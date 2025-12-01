@@ -159,6 +159,13 @@ h3 {
     color: black;
     font-size: 1rem;
 }
+.filespace {
+    position: absolute;
+}
 #fileinput { 
    height: 6rem;
+}
+#previewimg,#previewvid {
+   height: auto;
+   width: auto;
 }
