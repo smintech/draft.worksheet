@@ -197,29 +197,39 @@ resetBtn.addEventListener("click", () => {
     table.innerHTML = saved;
     alert("Restored successfully!");
 })
-const space = document.getElementById('filespace');
-const img = document.getElementById('previewimg');
-const video = document.getElementById('previewvid');
-     file.addEventListener("change", () => {
-    space.innerHTML = "";
-    const input = file.files[0];
-            if (!input) return;
 
-        const url = URL.createObjectURL(file);
 
-        if (input.type.startsWith('image/')) {
-        
-        const img = document.createElement('img');
-        img.src = url;
-        img.style.maxWidth = "400px";
-        img.style.maxHeight = "300px";
-        space.appendChild(img);
-    } else if (input.type.startsWith('video/')) {
-        const video = document.createElement('video');
-        video.src = url;
-        video.controls = true;
-        video.style.maxWidth = "400px";
-        video.style.maxHeight = "300px";
-        space.appendChild(video);
-    }
-});
+const fileInput = document.getElementById('file-input');
+const previewImg = document.getElementById('previewimg');
+const previewVid = document.getElementById('previewvid');
+const placeholderText = document.getElementById('placeholdertext');
+        fileInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    previewImg.style.display = 'none';
+                    previewVid.style.display = 'none';
+                    placeholderText.style.display = 'none';
+                    
+                    if (file.type.startsWith('image/')) {
+                        
+                        previewImg.src = e.target.result;
+                        previewImg.style.display = 'block';
+                    } else if (file.type.startsWith('video/')) {
+                        
+                        previewVid.src = e.target.result;
+                        previewVid.style.display = 'block';
+                        previewVid.load();
+                    }
+
+                reader.readAsDataURL(file);
+
+            } else {
+                previewImg.style.display = 'none';
+                previewVid.style.display = 'none';
+                placeholderText.textContent = 'Preview area. Select a file above.';
+                placeholderText.style.display = 'block';
+            }
+        });
