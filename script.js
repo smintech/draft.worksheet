@@ -202,33 +202,30 @@ const fileInput = document.getElementById('fileinput');
 const previewImg = document.getElementById('previewimg');
 const previewVid = document.getElementById('previewvid');
 const placeholderText = document.getElementById('placeholdertext');
-        fileInput.addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
+    fileInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
 
-                reader.onload = function(e) {
-                    previewImg.style.display = 'none';
-                    previewVid.style.display = 'none';
-                    placeholderText.style.display = 'none';
-                    }
-                    if (file.type.startsWith('image/')) {
+            reader.onload = function(e) {
+            previewImg.style.display = 'none';
+            previewVid.style.display = 'none';
+            placeholderText.style.display = 'none';
+            }
+            if (file.type.startsWith('image/')) {
                         
-                        previewImg.src = e.target.result;
-                        previewImg.style.display = 'block';
-                    } else if (file.type.startsWith('video/')) {
+            previewImg.src = e.target.result;
+            previewImg.style.display = 'block';
+            } else if (file.type.startsWith('video/')) {
                         
-                        previewVid.src = e.target.result;
-                        previewVid.style.display = 'block';
-                        previewVid.load();
-                    };
-
-                reader.readAsDataURL(file);
-
-            } else 
+            previewVid.src = e.target.result;
+            previewVid.style.display = 'block';
+            previewVid.load();
+            } else {
                 previewImg.style.display = 'none';
                 previewVid.style.display = 'none';
                 placeholderText.textContent = 'Preview area. Select a file above.';
                 placeholderText.style.display = 'block';
             }
+            reader.readAsDataURL(file);
 });
