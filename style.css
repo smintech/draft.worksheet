@@ -16,7 +16,7 @@ body {
     pointer-events: auto;
     z-index: auto;
     pointer-events: auto;
-    transform: translateY(30%);
+    transform: translateY(25%);
 }
 body, html {
     overflow: auto;
@@ -161,6 +161,7 @@ h3 {
 }
 .filespace {
     position: absolute;
+    transform: translateY(50%);
 }
 #fileinput { 
    height: 6rem;
