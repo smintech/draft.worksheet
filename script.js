@@ -221,6 +221,7 @@ fileInput.addEventListener('change', function(event) {
             fileDiv.style.maxWidth = '200px';
             fileDiv.style.maxHeight = '160px';
             fileDiv.style.textAlign = 'center';
+            fileDiv.style.overflow = 'hidden';
             
             let previewElement;
     
