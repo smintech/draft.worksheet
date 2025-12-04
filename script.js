@@ -213,5 +213,6 @@ function addMultipleFiles () {
         reader.readAsDataURL(file);
         }
     }
-document.addEventListener ("DOMContentLoaded", () => { fileInput.addEventListener ("change", addMultipleFiles);
+document.addEventListener ("DOMContentLoaded", () => {
+    fileInput.addEventListener ("change", addMultipleFiles);
 });
