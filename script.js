@@ -204,7 +204,10 @@ const previewVid = document.getElementById('previewvid');
 const placeholderText = document.getElementById('placeholdertext');
 
 fileInput.addEventListener('change', function(event) {
-    const file = event.target.files[10];
+    const file = event.target.files[0];
+    
+    previewContainer.innerHTML = '';
+    placeholderText.style.display = 'none';
 
     if (!file) {  
         previewImg.style.display = 'none';
