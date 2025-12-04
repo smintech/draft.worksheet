@@ -170,7 +170,7 @@ h3 {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .preview-box {
-    position: absolute;
+    position: relative;
     width: 100%;
     min-height: 220px;
     max-height: 350px;
@@ -186,7 +186,6 @@ h3 {
     background: #f7f9fb;
 }
 .preview-box img {
-    position: absolute;
     width: 120px;
     height: 120px;
     object-fit: cover;
