@@ -160,6 +160,7 @@ h3 {
     font-size: 1rem;
 }
 .filespace {
+    position: absolute;
     transform: translateY(10rem,49%);
     height: 15rem;
     width: 10rem;
@@ -168,11 +169,13 @@ h3 {
    height: 6rem;
 }
 .preview-box {
+   position: absolute;
    transform: translateY(10rem,49%);
    height: 15rem;
    width: 15rem;
 }
 #previewimg,#previewvid {
+   position: absolute;
    transform: translateY(10rem,49%);
    height: 15rem;
    width: 15rem;
