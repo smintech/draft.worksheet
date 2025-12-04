@@ -174,12 +174,22 @@ h3 {
     width: 100%;
     overflow-x: auto;
 }
-.filespace img,
-.filespace video {
-    height: 15%;
-    width: 15%;
-    object-fit: cover;
+.photodiv {
+    width: 150px;
+    height: 200px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photodiv img,
+.photodiv video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 #fileinput { 
    height: 6rem;
