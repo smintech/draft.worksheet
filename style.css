@@ -167,6 +167,6 @@ h3 {
 }
 #previewimg,#previewvid {
    display: flex;
-   height: auto;
-   width: auto;
+   height: 10rem;
+   width: 10rem;
 }
