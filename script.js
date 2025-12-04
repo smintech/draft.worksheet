@@ -199,8 +199,6 @@ resetBtn.addEventListener("click", () => {
 });
 const fileSpace = document.getElementById('filespace');
 const fileInput = document.getElementById('fileinput');
-const previewImg = document.getElementById('previewimg');
-const previewVid = document.getElementById('previewvid');
 const placeholderText = document.getElementById('placeholdertext');
 
 fileInput.addEventListener('change', function(event) {
@@ -229,6 +227,7 @@ fileInput.addEventListener('change', function(event) {
                 previewElement.src = e.target.result;
                 previewElement.controls = true;
     }
+previewElement.classList.add("preview-box");
 fileSpace.appendChild(previewElement);
     };
     reader.readAsDataURL(file);
