@@ -163,16 +163,15 @@ h3 {
 #filespace {
     display: grid;
     gap: 15px;
-    width: 100px;
+    width: 100%;
     height: auto;
     background: white;
     padding: 20px;
-    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .preview-box {
-    width: 400px;
+    width: 100%;
     min-height: 220px;
     max-height: 350px;
     border: 2px dashed #6c7a89;
@@ -182,7 +181,6 @@ h3 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 15px;
-    object-fit: cover;
     justify-content: center;
     background: #f7f9fb;
 }
