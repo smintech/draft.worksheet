@@ -183,10 +183,9 @@ h3 {
     border-radius: 6px;
     padding: 10px;
     overflow-y: auto;
-    display: flex;
+    display: grid;
     gap: 15px;
     object-fit: cover;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     background: #f7f9fb;
