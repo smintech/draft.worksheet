@@ -199,6 +199,8 @@ resetBtn.addEventListener("click", () => {
 });
 const fileSpace = document.getElementById('filespace');
 const fileInput = document.getElementById('fileinput');
+const previewImg = document.getElementById('previewimg');
+const previewVid = document.getElementById('previewvid');
 const placeholderText = document.getElementById('placeholdertext');
 
 fileInput.addEventListener('change', function(event) {
@@ -214,17 +216,20 @@ fileInput.addEventListener('change', function(event) {
     }
     Array.from(files).forEach(file => {
         const reader = new FileReader();
+        
         reader.onload = function(e) {
-            const fileType = file.type;
-            const previewElement = document.createElement(fileType.startsWith('video/') ? 'video' : 'img');
+            let previewElement;
     
-    if (fileType.startsWith('image/')) {
+    if (file.type.startsWith('image/')) {
+                previewElement = document.createElement('img');
                 previewElement.src = e.target.result;
-    }else if (fileType.startsWith('video/')) {
+
+            } else if (file.type.startsWith('video/')) {
+                previewElement = document.createElement('video');
                 previewElement.src = e.target.result;
                 previewElement.controls = true;
     }
-previewContainer.appendChild(previewElement);
+fileSpace.appendChild(previewElement);
     };
     reader.readAsDataURL(file);
     });
