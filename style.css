@@ -164,8 +164,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 10px;
-    top: 90%;
-    left: 20%;
+    margin-top: 50px;
     height: auto;
     width: 20%;
     white-space: nowrap;
@@ -174,8 +173,6 @@ h3 {
 .filespace video {
     width: 10rem;
     height: 15rem;
-    top: 90%;
-    left: 20%;
     object-fit: cover;
     border-radius: 5px;
 }
