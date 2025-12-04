@@ -200,43 +200,18 @@ resetBtn.addEventListener("click", () => {
 const fileSpace = document.getElementById('filespace');
 const fileInput = document.getElementById('fileinput');
 
-fileInput.addEventListener('change', function(event) {
-    const files = event.target.files;
-    
-    fileSpace.innerHTML = '';
-    
-    if (files.length === 0) {
-        fileSpace.textContent = 'Preview area. Select files above.';
-        return;
+function loadFile() {
+    container.innerHTML +=
+      `<img src="$(this.result}" width="180"/>`;
     }
-    Array.from(files).forEach(file => {
-        const reader = new FileReader();
-        
-        reader.onload = function(e) {
-            const fileDiv = document.createElement('div');
-            fileDiv.classList.add('photodiv');
-            fileDiv.style.display = 'inline-block';
-            fileDiv.style.margin = '10px';
-            fileDiv.style.border = '1px solid #ccc';
-            fileDiv.style.padding = '5px';
-            fileDiv.style.maxWidth = '200px';
-            fileDiv.style.maxHeight = '160px';
-            fileDiv.style.textAlign = 'center';
-            fileDiv.style.overflow = 'hidden';
-            
-            let previewElement;
+function addMultipleFiles () {
+    container.innerHTML = "";
     
-    if (file.type.startsWith('image/')) {
-        previewElement = document.createElement('img');
-    } else if (file.type.startsWith('video/')) {
-        previewElement = document.createElement('video');
-        previewElement.src = e.target.result;
-        previewElement.controls = true;
+    for (const file of this.files) {
+        let reader = new FileReader);
+        reader.addEventListener ("load", loadFile);
+        reader.readAsDataURL(file);
+        }
     }
-previewElement.src = e.target.result;
-fileDiv.appendChild(previewElement);
-fileSpace.appendChild(fileDiv);
-    };
-    reader.readAsDataURL(file);
-    });
+document.addEventListener ("DOMContentLoaded", () => { fileInput.addEventListener ("change", addMultipleFiles);
 });
