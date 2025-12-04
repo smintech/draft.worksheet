@@ -202,7 +202,7 @@ const fileInput = document.getElementById('fileinput');
 const placeholderText = document.getElementById('placeholdertext');
 
 fileInput.addEventListener('change', function(event) {
-    const file = event.target.files[0];
+    const files = event.target.files;
     
     fileSpace.innerHTML = '';
     placeholderText.style.display = 'none';
