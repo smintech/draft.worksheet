@@ -162,7 +162,7 @@ h3 {
 }
 #filespace {
     position: relative;
-    transform: translate(30%,40%);
+    transform: translate(25%,35%);
     width: 100%px;
     height: auto;
     background: white;
@@ -187,19 +187,13 @@ h3 {
     background: #f7f9fb;
 }
 .preview-box img {
+    flex: 1 1 calc(10% - 10px);
     width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 6px;
     border: 1px solid #ddd;
 }
-.photodiv img,
-.photodiv video {
-    bottom: 0;
-    width: 100px;
-    height: 150px;
-    object-fit: cover;
-}
 #fileinput { 
-   height: 6rem;
+   height: 4rem;
 }
