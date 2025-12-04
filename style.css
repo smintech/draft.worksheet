@@ -169,7 +169,7 @@ h3 {
     border: 2px dashed #6c7a89;
     background: #f7f9fb;
     margin-top: 20px;
-    max-height: 350px;
+    max-height: 20%;
     overflow-y: auto;
     border-radius: 6px;
 }
@@ -191,5 +191,5 @@ input[type=file] {
 #fileinput { 
    position: absolute;
    height: 3rem;
-   transform: translate(20rem,40em);
+   transform: translate(20rem,20rem);
 }
