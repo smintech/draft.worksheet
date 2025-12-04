@@ -129,6 +129,7 @@ img {
     left: 10px;
 }
 footer {
+    top: 98%;
     font-weight: 600;
     color: black;
 }
@@ -161,7 +162,7 @@ h3 {
 }
 .filespace {
     position: absolute;
-    transform: translateY(10rem,49%);
+    transform: translateY(20rem,49%);
     height: 15rem;
     width: 10rem;
 }
@@ -170,13 +171,13 @@ h3 {
 }
 .preview-box {
    position: absolute;
-   transform: translateY(10rem,49%);
+   transform: translateY(20rem,49%);
    height: 15rem;
    width: 15rem;
 }
 #previewimg,#previewvid {
    position: absolute;
-   transform: translateY(10rem,49%);
+   transform: translateY(20rem,49%);
    height: 15rem;
    width: 15rem;
 }
