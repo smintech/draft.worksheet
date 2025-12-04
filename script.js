@@ -197,44 +197,35 @@ resetBtn.addEventListener("click", () => {
     table.innerHTML = saved;
     alert("Restored successfully!");
 });
-
+const fileSpace = document.getElementById('filespace');
 const fileInput = document.getElementById('fileinput');
-const previewImg = document.getElementById('previewimg');
-const previewVid = document.getElementById('previewvid');
 const placeholderText = document.getElementById('placeholdertext');
 
 fileInput.addEventListener('change', function(event) {
     const file = event.target.files[0];
     
-    previewContainer.innerHTML = '';
+    fileSpace.innerHTML = '';
     placeholderText.style.display = 'none';
-
-    if (!file) {  
-        previewImg.style.display = 'none';
-        previewVid.style.display = 'none';
+    
+    if (files.length === 0) {
         placeholderText.style.display = 'block';
-        placeholderText.textContent = 'Preview area. Select a file above.';
+        placeholderText.textContent = 'Preview area. Select files above.';
         return;
     }
-
-    const reader = new FileReader();
-
-    reader.onload = function(e) {
-
-        previewImg.style.display = 'none';
-        previewVid.style.display = 'none';
-        placeholderText.style.display = 'none';
-
-        if (file.type.startsWith('image/')) {
-            previewImg.src = e.target.result;
-            previewImg.style.display = 'block';
-        }
-        else if (file.type.startsWith('video/')) {
-            previewVid.src = e.target.result;
-            previewVid.style.display = 'block';
-            previewVid.load();
-        }
+    Array.from(files).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const fileType = file.type;
+            const previewElement = document.createElement(fileType.startsWith('video/') ? 'video' : 'img');
+    
+    if (fileType.startsWith('image/')) {
+                previewElement.src = e.target.result;
+    }else if (fileType.startsWith('video/')) {
+                previewElement.src = e.target.result;
+                previewElement.controls = true;
+    }
+previewContainer.appendChild(previewElement);
     };
-
     reader.readAsDataURL(file);
+    });
 });
