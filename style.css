@@ -161,8 +161,8 @@ h3 {
     font-size: 1rem;
 }
 .filespace {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 50px;
     height: auto;
