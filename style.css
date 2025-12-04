@@ -163,7 +163,8 @@ h3 {
 #filespace {
     position: relative;
     transform: translate(30%,40%);
-    width: 330px;
+    width: 100%px;
+    height: auto;
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -179,10 +180,11 @@ h3 {
     padding: 10px;
     overflow-y: auto;
     display: flex;
+    gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 10px;
+    
     background: #f7f9fb;
 }
 .preview-box img {
