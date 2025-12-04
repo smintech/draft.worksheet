@@ -129,8 +129,6 @@ img {
     left: 10px;
 }
 footer {
-    position: static;
-    top: 90%;
     font-weight: 600;
     color: black;
 }
@@ -191,5 +189,5 @@ input[type=file] {
 #fileinput { 
    position: absolute;
    height: 3rem;
-   transform: translate(20rem,-3rem);
+   transform: translate(28rem,-3rem);
 }
