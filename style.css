@@ -161,23 +161,22 @@ h3 {
     font-size: 1rem;
 }
 input[type=file] {
-    display: block; margin-top: 10px; margin-bottom: 30px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 30px;
     border: 2px solid #49C8FC;
     padding: 5px;
 }
-.filespace {
-    position: relative;
+#filespace {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     bottom: 0;
-    left: 20%
     transform: translateX(-50%);
     background: #f5f5f5;
     margin-top: 100px;
     height: 200px;
     width: 100%;
-    overflow-x: auto;
 }
 .photodiv {
     position: absolute;
