@@ -169,12 +169,14 @@ h3 {
     transform: translateX(-50%);
     background: #f5f5f5;
     margin-top: 100px;
-    height: auto;
+    height: 15%;
     width: 100%;
     overflow-x: auto;
 }
 .filespace img,
 .filespace video {
+    height: 15%;
+    width: 15%;
     object-fit: cover;
     border-radius: 5px;
 }
