@@ -160,9 +160,9 @@ h3 {
     font-size: 1rem;
 }
 .filespace {
-    transform: translateY(49%);
-    height: 10rem;
-   width: 10rem;
+    transform: translateY(10rem,49%);
+    height: 15rem;
+   width: 20rem;
 }
 #fileinput { 
    height: 6rem;
