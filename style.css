@@ -176,7 +176,7 @@ h3 {
 }
 .preview-box {
     position: relative;
-    width: 100%;
+    width: 400px;
     min-height: 220px;
     max-height: 350px;
     border: 2px dashed #6c7a89;
@@ -187,11 +187,9 @@ h3 {
     gap: 15px;
     object-fit: cover;
     justify-content: center;
-    align-items: flex-start;
     background: #f7f9fb;
 }
 .preview-box img {
-    flex: 1 1 calc(10% - 10px);
     width: 120px;
     height: 120px;
     object-fit: cover;
