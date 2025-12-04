@@ -160,14 +160,8 @@ h3 {
     color: black;
     font-size: 1rem;
 }
-input[type=file] {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    border: 2px solid #49C8FC;
-    padding: 5px;
-}
 #filespace {
+    position: relative;
     transform: translate(30%,40%);
     width: 330px;
     background: white;
@@ -176,6 +170,7 @@ input[type=file] {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .preview-box {
+    position: absolute;
     width: 100%;
     min-height: 220px;
     max-height: 350px;
@@ -191,6 +186,7 @@ input[type=file] {
     background: #f7f9fb;
 }
 .preview-box img {
+    position: absolute;
     width: 120px;
     height: 120px;
     object-fit: cover;
