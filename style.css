@@ -162,23 +162,25 @@ h3 {
 }
 .filespace {
     position: absolute;
-    transform: translateY(20rem,49%);
+    transform: translate(20rem,49%rem);
     height: 15rem;
     width: 10rem;
+    white-space: nowrap;
 }
 #fileinput { 
    height: 6rem;
 }
 .preview-box {
    position: absolute;
-   transform: translateY(20rem,49%);
+   transform: translate(20rem,49%rem);
    height: 15rem;
    width: 15rem;
 }
 #previewimg,#previewvid {
    position: absolute;
-   transform: translateY(20rem,49%);
+   transform: translate(20rem,49%rem);
    height: 15rem;
    width: 15rem;
+   white-space: nowrap;
 }
    
