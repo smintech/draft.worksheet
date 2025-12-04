@@ -167,6 +167,11 @@ h3 {
 #fileinput { 
    height: 6rem;
 }
+.preview-box {
+   transform: translateY(10rem,49%);
+   height: 15rem;
+   width: 15rem;
+}
 #previewimg,#previewvid {
    transform: translateY(10rem,49%);
    height: 15rem;
