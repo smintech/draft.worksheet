@@ -199,17 +199,14 @@ resetBtn.addEventListener("click", () => {
 });
 const fileSpace = document.getElementById('filespace');
 const fileInput = document.getElementById('fileinput');
-const placeholderText = document.getElementById('placeholdertext');
 
 fileInput.addEventListener('change', function(event) {
     const files = event.target.files;
     
     fileSpace.innerHTML = '';
-    placeholderText.style.display = 'none';
     
     if (files.length === 0) {
-        placeholderText.style.display = 'block';
-        placeholderText.textContent = 'Preview area. Select files above.';
+        fileSpace.textContent = 'Preview area. Select files above.';
         return;
     }
     Array.from(files).forEach(file => {
@@ -219,15 +216,13 @@ fileInput.addEventListener('change', function(event) {
             let previewElement;
     
     if (file.type.startsWith('image/')) {
-                previewElement = document.createElement('img');
-                previewElement.src = e.target.result;
-
-            } else if (file.type.startsWith('video/')) {
-                previewElement = document.createElement('video');
-                previewElement.src = e.target.result;
-                previewElement.controls = true;
+        previewElement = document.createElement('img');
+    } else if (file.type.startsWith('video/')) {
+        previewElement = document.createElement('video');
+        previewElement.src = e.target.result;
+        previewElement.controls = true;
     }
-previewElement.classList.add("preview-box");
+previewElement.src = e.target.result;
 fileSpace.appendChild(previewElement);
     };
     reader.readAsDataURL(file);
