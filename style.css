@@ -163,6 +163,7 @@ h3 {
 .filespace {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
     gap: 10px;
     bottom: 0;
     left: 20%
