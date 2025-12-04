@@ -162,11 +162,15 @@ h3 {
 }
 #filespace {
     position: relative;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
     transform: translate(25%,35%);
     width: 100%px;
     height: auto;
     background: white;
     padding: 20px;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
@@ -181,6 +185,7 @@ h3 {
     overflow-y: auto;
     display: flex;
     gap: 15px;
+    object-fit: cover;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
