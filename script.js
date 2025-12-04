@@ -214,6 +214,7 @@ fileInput.addEventListener('change', function(event) {
         
         reader.onload = function(e) {
             const fileDiv = document.createElement('div');
+            fileDiv.classList.add('photodiv');
             fileDiv.style.display = 'inline-block';
             fileDiv.style.margin = '10px';
             fileDiv.style.border = '1px solid #ccc';
