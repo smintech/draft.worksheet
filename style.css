@@ -129,7 +129,7 @@ img {
     left: 10px;
 }
 footer {
-    bottom: 0;
+    transform: translateY(90%);
     font-weight: 600;
     color: black;
 }
@@ -190,7 +190,5 @@ input[type=file] {
 }
 #fileinput { 
    height: 3rem;
-   left: 20rem;
-   transform: translateX(20%);
-}
+   transform: translateX(50%);
 }
