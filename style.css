@@ -191,4 +191,6 @@ input[type=file] {
 #fileinput { 
    height: 3rem;
    left: 20rem;
+   transform: translateX(20%);
+}
 }
