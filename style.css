@@ -160,6 +160,11 @@ h3 {
     color: black;
     font-size: 1rem;
 }
+input[type=file] {
+    display: block; margin-top: 10px; margin-bottom: 30px;
+    border: 2px solid #49C8FC;
+    padding: 5px;
+}
 .filespace {
     position: relative;
     display: flex;
