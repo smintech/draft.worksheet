@@ -172,7 +172,8 @@ h3 {
     overflow-y: auto;
     border-radius: 6px;
 }
-.preview-box img {
+.preview-box img,
+#container img {
     position: static;
     width: 120px;
     height: 120px;
