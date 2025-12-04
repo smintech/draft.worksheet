@@ -162,8 +162,14 @@ h3 {
 .filespace {
     transform: translateY(10rem,49%);
     height: 15rem;
-   width: 20rem;
+    width: 10rem;
 }
 #fileinput { 
    height: 6rem;
 }
+#previewimg,#previewvid {
+   transform: translateY(10rem,49%);
+   height: 15rem;
+   width: 15rem;
+}
+   
