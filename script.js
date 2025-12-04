@@ -213,6 +213,15 @@ fileInput.addEventListener('change', function(event) {
         const reader = new FileReader();
         
         reader.onload = function(e) {
+            const fileDiv = document.createElement('div');
+            fileDiv.style.display = 'inline-block';
+            fileDiv.style.margin = '10px';
+            fileDiv.style.border = '1px solid #ccc';
+            fileDiv.style.padding = '5px';
+            fileDiv.style.maxWidth = '200px';
+            fileDiv.style.maxHeight = '160px';
+            fileDiv.style.textAlign = 'center';
+            
             let previewElement;
     
     if (file.type.startsWith('image/')) {
@@ -222,8 +231,8 @@ fileInput.addEventListener('change', function(event) {
         previewElement.src = e.target.result;
         previewElement.controls = true;
     }
-previewElement.src = e.target.result;
-fileSpace.appendChild(previewElement);
+fileDiv.appendChild(previewElement);
+fileSpace.appendChild(fileDiv);
     };
     reader.readAsDataURL(file);
     });
