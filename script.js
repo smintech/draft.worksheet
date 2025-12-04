@@ -204,7 +204,7 @@ const previewVid = document.getElementById('previewvid');
 const placeholderText = document.getElementById('placeholdertext');
 
 fileInput.addEventListener('change', function(event) {
-    const file = event.target.files[0];
+    const file = event.target.files[10];
 
     if (!file) {  
         previewImg.style.display = 'none';
