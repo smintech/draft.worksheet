@@ -129,7 +129,7 @@ img {
     left: 10px;
 }
 footer {
-    top: 98%;
+    bottom: 0;
     font-weight: 600;
     color: black;
 }
@@ -161,6 +161,7 @@ h3 {
     font-size: 1rem;
 }
 #container {
+    left: 20rem;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -188,5 +189,6 @@ input[type=file] {
     background: black;
 }
 #fileinput { 
-   height: 4rem;
+   height: 3rem;
+   left: 20rem;
 }
