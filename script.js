@@ -198,7 +198,7 @@ resetBtn.addEventListener("click", () => {
     alert("Restored successfully!");
 });
 document.addEventListener("DOMContentLoaded", () => {
-    const fileInput = document.getElementById("file-input");
+    const fileInput = document.getElementById("fileinput");
     const container = document.getElementById("container");
 
     function loadFile() {
