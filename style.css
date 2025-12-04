@@ -161,6 +161,7 @@ h3 {
     font-size: 1rem;
 }
 .filespace {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -175,6 +176,7 @@ h3 {
     overflow-x: auto;
 }
 .photodiv {
+    position: absolute;
     width: 150px;
     height: 200px;
     bottom: 0;
