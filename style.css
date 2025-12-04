@@ -178,20 +178,28 @@ input[type=file] {
     height: 200px;
     width: 100%;
 }
-.photodiv {
-    position: absolute;
-    width: 150px;
-    height: 200px;
-    bottom: 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: visible;
+.preview-box {
+    width: 100%;
+    min-height: 220px;
+    max-height: 350px;
+    border: 2px dashed #6c7a89;
+    border-radius: 6px;
+    padding: 10px;
+    overflow-y: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    clip-path: inset(0 0 0 0);
+    align-items: flex-start;
+    gap: 10px;
+    background: #f7f9fb;
 }
-
+.preview-box img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
 .photodiv img,
 .photodiv video {
     bottom: 0;
