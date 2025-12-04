@@ -231,6 +231,7 @@ fileInput.addEventListener('change', function(event) {
         previewElement.src = e.target.result;
         previewElement.controls = true;
     }
+previewElement.src = e.target.result;
 fileDiv.appendChild(previewElement);
 fileSpace.appendChild(fileDiv);
     };
