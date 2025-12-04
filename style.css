@@ -169,9 +169,8 @@ h3 {
     width: 100%;
     white-space: nowrap;
 }
-#previewimg,#previewvid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+.filespace img,
+.filespace video {
     width: 10rem;
     height: 15rem;
     top: 80%;
