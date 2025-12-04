@@ -162,11 +162,9 @@ h3 {
 }
 #filespace {
     position: relative;
-    display: flex;
+    display: grid;
     gap: 15px;
-    align-items: flex-start;
-    transform: translate(20%,30%);
-    width: 100%px;
+    width: 100px;
     height: auto;
     background: white;
     padding: 20px;
