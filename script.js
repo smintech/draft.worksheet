@@ -197,22 +197,23 @@ resetBtn.addEventListener("click", () => {
     table.innerHTML = saved;
     alert("Restored successfully!");
 });
-const fileSpace = document.getElementById('filespace');
-const fileInput = document.getElementById('fileinput');
+document.addEventListener("DOMContentLoaded", () => {
+    const fileInput = document.getElementById("file-input");
+    const container = document.getElementById("container");
 
-function loadFile() {
-    container.innerHTML +=
-      `<img src="$(this.result}" width="180"/>`;
+    function loadFile() {
+        container.innerHTML += `<img src="${this.result}" />`;
     }
-function addMultipleFiles () {
-    container.innerHTML = "";
-    
-    for (const file of this.files) {
-        let reader = new FileReader);
-        reader.addEventListener ("load", loadFile);
-        reader.readAsDataURL(file);
+
+    function addMultipleFiles() {
+        container.innerHTML = "";
+
+        for (const file of this.files) {
+            let reader = new FileReader();
+            reader.addEventListener("load", loadFile);
+            reader.readAsDataURL(file);
         }
     }
-document.addEventListener ("DOMContentLoaded", () => {
-    fileInput.addEventListener ("change", addMultipleFiles);
+
+    fileInput.addEventListener("change", addMultipleFiles);
 });
