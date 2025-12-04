@@ -168,6 +168,7 @@ input[type=file] {
     padding: 5px;
 }
 #filespace {
+    transform: translate(30%,40%);
     width: 330px;
     background: white;
     padding: 20px;
