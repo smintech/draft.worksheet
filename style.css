@@ -161,26 +161,20 @@ h3 {
     font-size: 1rem;
 }
 .filespace {
-    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
     transform: translate(20rem,49%rem);
-    height: 15rem;
-    width: 10rem;
+    height: auto;
+    width: 100%;
     white-space: nowrap;
+}
+.filespace img,video {
+    width: 10rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 5px;
 }
 #fileinput { 
    height: 6rem;
 }
-.preview-box {
-   position: absolute;
-   transform: translate(20rem,49%rem);
-   height: 15rem;
-   width: 15rem;
-}
-#previewimg,#previewvid {
-   position: absolute;
-   transform: translate(20rem,49%rem);
-   height: 15rem;
-   width: 15rem;
-   white-space: nowrap;
-}
-   
