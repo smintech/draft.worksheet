@@ -177,6 +177,7 @@ h3 {
 .photodiv {
     width: 150px;
     height: 200px;
+    bottom: 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
@@ -187,8 +188,9 @@ h3 {
 
 .photodiv img,
 .photodiv video {
-    width: 100%;
-    height: 100%;
+    bottom: 0;
+    width: 100px;
+    height: 150px;
     object-fit: cover;
 }
 #fileinput { 
