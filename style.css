@@ -168,15 +168,11 @@ input[type=file] {
     padding: 5px;
 }
 #filespace {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    bottom: 0;
-    transform: translateX(-50%);
-    background: #f5f5f5;
-    margin-top: 100px;
-    height: 200px;
-    width: 100%;
+    width: 330px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .preview-box {
     width: 100%;
