@@ -161,6 +161,7 @@ h3 {
     font-size: 1rem;
 }
 .filespace {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 10px;
@@ -169,7 +170,11 @@ h3 {
     width: 100%;
     white-space: nowrap;
 }
-.filespace img,video {
+#previewimg,#previewvid {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    transform: translate(20rem,49%rem);
     width: 10rem;
     height: 15rem;
     object-fit: cover;
